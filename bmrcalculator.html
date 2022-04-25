@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="health and nutrition">
+        <meta name="author" content="remyduijn">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>My Webpage</title>
+
+        <script>
+            function calculateCalories() 
+            {
+                var age = document.getElementById("inputAge").value; 
+                var height = document.getElementById("inputHeight").value; 
+                var weight = document.getElementById("inputWeight").value;
+                var gender = document.getElementById("inputGender").value;
+                if (gender === 'male')
+                {
+                    var calories = 66.5 + (13.75 * weight) + (5.003 * height) - (6.755 * age);
+                }
+                else
+                {
+                    var calories = 655 + (9.563 * weight) + (1.850 * height) - (4.676 * age);
+                }
+                document.getElementById("result").innerHTML = parseInt(calories.toFixed(2));
+            }
+            
+            function calculateTotalCalories() 
+            {
+                var activity = document.getElementById("inputActivity").value; 
+                var age = document.getElementById("inputAge").value; 
+                var height = document.getElementById("inputHeight").value; 
+                var weight = document.getElementById("inputWeight").value;
+                var gender = document.getElementById("inputGender").value;
+                if (activity === 'inactive' && gender ==='male')
+                {
+                    var total_calories = 1.2 * (66.5 + (13.75 * weight) + (5.003 * height) - (6.755 * age));
+                }
+                else if ((activity === 'inactive' && gender ==='female'))
+                {
+                    var total_calories = 1.2 * (655 + (9.563 * weight) + (1.850 * height) - (4.676 * age));
+                }
+                else if (activity === 'mild' && gender ==='male')
+                {
+                    var total_calories = 1.375 * (66.5 + (13.75 * weight) + (5.003 * height) - (6.755 * age));
+                }
+                else if (activity === 'mild' && gender ==='female')
+                {
+                    var total_calories = 1.375 * (655 + (9.563 * weight) + (1.850 * height) - (4.676 * age));
+                }
+                else if (activity === 'moderate' && gender ==='male')
+                {
+                    var total_calories = 1.55 * (66.5 + (13.75 * weight) + (5.003 * height) - (6.755 * age));
+                }
+                else if (activity === 'moderate' && gender ==='female')
+                {
+                    var total_calories = 1.55 * (655 + (9.563 * weight) + (1.850 * height) - (4.676 * age));
+                }
+                else if (activity === 'heavy' && gender ==='male')
+                {
+                    var total_calories = 1.725 * (66.5 + (13.75 * weight) + (5.003 * height) - (6.755 * age));
+                }
+                else if (activity === 'heavy' && gender ==='female')
+                {
+                    var total_calories = 1.725 * (655 + (9.563 * weight) + (1.850 * height) - (4.676 * age));
+                }
+                else if (activity === 'very heavy' && gender ==='male')
+                {
+                    var total_calories = 1.9 * (66.5 + (13.75 * weight) + (5.003 * height) - (6.755 * age));
+                }
+                else 
+                {
+                    var total_calories = 1.9 * (655 + (9.563 * weight) + (1.850 * height) - (4.676 * age));
+                }
+                document.getElementById("result2").innerHTML = parseInt(total_calories.toFixed(2));
+                document.getElementById("result3").innerHTML = parseInt(total_calories.toFixed(2));
+            }
+            
+            function calculateSedentaryCalories() 
+            {
+                var activity = document.getElementById("inputActivity").value; 
+                var age = document.getElementById("inputAge").value; 
+                var height = document.getElementById("inputHeight").value; 
+                var weight = document.getElementById("inputWeight").value;
+                var gender = document.getElementById("inputGender").value;
+                if (gender === 'male')
+                {
+                    var sedentary_calories = 1.2 * (66.5 + (13.75 * weight) + (5.003 * height) - (6.755 * age));
+                }
+                else
+                {
+                    var sedentary_calories = 1.2 * (655 + (9.563 * weight) + (1.850 * height) - (4.676 * age));
+                }
+                document.getElementById("result4").innerHTML = parseInt(sedentary_calories.toFixed(2));
+            }
+        </script>
+    </head>
+   
+    <body style="background-color: LightSeaGreen;">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="bmrcalculator.html">BMR Calculator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="bmicalculator.html">BMI Calculator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="bodyfatcalc.html">Body Fat Calculator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="caloriecounter.html">Calorie Counter</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <h1 class="title">BMR Calculator</h1>
+        
+        <p id="text">The main principal in fulfilling energy needs is actually simple; it’s all about balance, because if you consume more 
+        calories than needed, it can cause an increase in body weight in the near future aside of increasing the risk to suffer from certain 
+        diseases, especially degenerative diseases. If you consume less calories than needed, you’ll encounter weight loss but at the same 
+        time decreasing the function of bodily organs due to the deficiency of required amount of energy.</p>
+        
+        <h2 class="title">Harris-Benedict Formula</h2>
+
+        <p id="text">With the help of your body weight, height, age and gender you can determine your daily calorie requirement with the Harris-Benedict 
+        formula. This formula is commonly used by nutritionists, it consists of the resting metabolism plus the energy you need for all your activities.</p><br>
+        
+        <table id="space2" class="centertable">
+            <tr>
+                <td style="width:130px" class="inputcornersl2">
+                    <div>
+                        <span>Age</span>
+                    </div>
+                </td>
+                <td id="row" style="width:130px" class="inputcornersr2"><input type="text" class="form-control" id="inputAge" name="age" maxlength="3" required></td>
+            </tr>
+            <tr>
+                <td style="width:130px" class="inputcornersl2">
+                    <div>
+                        <span>Height in cm</span>
+                    </div>
+                </td>
+                <td id="row" style="width:130px" class="inputcornersr2"><input type="text" class="form-control" id="inputHeight" name="height" maxlength="6" required></td>
+            </tr>
+            <tr>
+                <td style="width:130px" class="inputcornersl2">
+                    <div>
+                        <span>Weight in kg</span>
+                    </div>
+                </td>
+                <td id="row" style="width:130px" class="inputcornersr2"><input type="text" class="form-control" id="inputWeight" name="weight" maxlength="6" required></td>
+            </tr>
+            <tr>
+                <td style="width:130px" class="inputcornersl2">
+                    <div>
+                        <span>Gender</span>
+                    </div>
+                </td>
+                <td id="row" style="width:130px" class="inputcornersr2">
+                <select class="custom-select" id="inputGender" name="gender" required>
+                <option selected>Choose...</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                </select>
+                </td>
+            </tr>
+        </table>
+        <br>
+        
+        <div id="center">
+        <button type="button" class="btn btn-light" onclick="calculateCalories()">Calculate</button>        
+        </div>
+        <br><br>
+           
+        <p id="text">Your daily calorie needs (BMR): <span id="result"></span></p>
+        </p><br>
+
+        <p id="text">The above calculation shows your average basal energy expenditure (BEE), also known as basal metabolic rate (BMR). 
+        The average BEE for American women is about 1,400 calories while for men it is roughly 1,800. Your BEE is an estimate of the 
+        energy your body uses at rest. Typically about 60% of our total energy needs to come from resting metabolism, but this varies greatly 
+        depending on our activity level. In the calculation for total daily calorie needs, we need to take into account the level of 
+        daily activity, whereby the BMR will be multiplied by a number determined by your level of activity.</p><br>
+
+        <table id="space2" class="centertable">
+            <tr>
+                <td style="width:130px" class="inputcornersl2">
+                    <div>
+                        <span>Activity level</span>
+                    </div>
+                </td>
+                <td id="row" style="width:170px" class="inputcornersr2">
+                <select class="custom-select" id="inputActivity" name="activity" required>
+                <option selected>Choose...</option>
+                <option type="text" value="inactive">Inactive | little to no exercise, and office job</option>
+                <option type="text" value="mild">Mild activity | 1-3 x exercise per week, or mild active job</option>
+                <option type="text" value="moderate">Moderate activity | 3-5 x exercise per week, or average active job</option>
+                <option type="text" value="heavy">Very active | 6-7 x exercise per week, or very active job</option>
+                <option type="text" value="very heavy">Extremly active | 7 x exercise per week, and very active job</option>
+                </select>
+                </td>
+            </tr>
+        </table>
+        <br>
+
+        <div id="center">
+        <button type="button" class="btn btn-light" onclick="calculateTotalCalories() ^ calculateSedentaryCalories()">Calculate</button>
+        </div>
+        <br><br>
+        
+        <p id="text">Your total daily calorie needs: <span id="result2"></span></p>
+        <br>
+        
+        <p id="text">The above number of calories is a rough estimate of required calories per day based on your current activity level. 
+        If you consume <span id="result3">....</span> kcal/day you would simply maintain your current weight assuming that you 
+        consistently maintained the same activity level. If you completely eliminate any exercise (sedentary), you could consume 
+        <span id="result4">....</span> kcal/day without gaining weight. 
+        </p><br><br><br><br>
+    </body>
+</html>

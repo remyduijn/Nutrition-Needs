@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="health and nutrition">
+        <meta name="author" content="remyduijn">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>My Webpage</title>
+        
+        <script>
+            function calculateBMI() {
+                var height = document.getElementById("inputHeight").value; 
+                var weight = document.getElementById("inputWeight").value;
+
+                var bmi = (weight / Math.pow(height,2)) * 10000;
+             
+                document.getElementById("result").innerHTML = bmi.toFixed(1);
+            }
+
+            function calculateRangeLow() {
+                var height = document.getElementById("inputHeight").value; 
+                var weight = document.getElementById("inputWeight").value;
+
+                var low = 18.5 * Math.pow((height/100),2);
+             
+                document.getElementById("result2").innerHTML = low.toFixed(1) + ' -';
+            }
+
+            function calculateRangeHigh() {
+                var height = document.getElementById("inputHeight").value; 
+                var weight = document.getElementById("inputWeight").value;
+
+                var high = 25 * Math.pow((height/100),2);
+             
+                document.getElementById("result3").innerHTML = high.toFixed(1) + 'kg';
+            }
+        </script>
+    </head>
+   
+    <body style="background-color: LightSeaGreen;">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="bmrcalculator.html">BMR Calculator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="bmicalculator.html">BMI Calculator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="bodyfatcalc.html">Body Fat Calculator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="caloriecounter.html">Calorie Counter</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <h1 class="title">BMI Calculator</h1>
+        
+        <p id="text">BMI is a measurement of a person's leanness or corpulence based on their height and weight, and is intended to quantify tissue mass. It is widely used 
+        as a general indicator of whether a person has a healthy body weight for their height. Specifically, the value obtained from the calculation of BMI is used to 
+        categorize whether a person is underweight, normal weight, overweight, or obese depending on what range the value falls between.</p><br><br>
+        
+        <table id="space2" class="centertable">
+            <tr>
+                <td style="width:130px" class="inputcornersl2">
+                    <div>
+                        <span>Height in cm</span>
+                    </div>
+                </td>
+                <td id="row" style="width:130px" class="inputcornersr2"><input type="text" class="form-control" id="inputHeight" name="height" maxlength="6" size="10" required></td>
+            </tr>
+            <tr>
+                <td style="width:130px" class="inputcornersl2">
+                    <div>
+                        <span>Weight in kg</span>
+                    </div>
+                </td>
+                <td id="row" style="width:130px" class="inputcornersr2"><input type="text" class="form-control" id="inputWeight" name="weight" maxlength="6" size="10" required></td>
+            </tr>
+        </table>
+        <br>
+        
+        <div id="center">
+        <button type="button" class="btn btn-light" onclick="calculateBMI() ^ calculateRangeLow() ^ calculateRangeHigh()">Calculate</button>        
+        </div>
+        <br><br>
+             
+        <p id="text">Your Body Mass Index is: <span id="result"></span></p>
+        </p><br><br>
+        
+        <table class="centertable">
+            <tr class="header" id="borderbottom">
+                <td class="cornertopl">Category</td>
+                <td class="cornertopr">BMI range - kg/m2</td>
+            </tr>
+            <tr class="tablerow" id="borderbottom">
+                <td>Severe thinness</td>
+                <td class="borderleft"><16</td>
+            </tr>
+            <tr class="tablerow" id="borderbottom">
+                <td>Moderate thinness</td>
+                <td class="borderleft">16 - 17</td>
+            </tr>
+            <tr class="tablerow" id="borderbottom">
+                <td>Mild thinness</td>
+                <td class="borderleft">17 - 18.5</td>
+            </tr>
+            <tr class="tablerow" id="borderbottom">
+                <td>Normal</td>
+                <td class="borderleft">18.5 - 25</td>
+            </tr>
+            <tr class="tablerow" id="borderbottom">
+                <td>Overweight</td>
+                <td class="borderleft">25 - 30</td>
+            </tr>
+            <tr class="tablerow" id="borderbottom">
+                <td>Obese class I</td>
+                <td class="borderleft">30 - 35</td>
+            </tr>
+            <tr class="tablerow" id="borderbottom">
+                <td>Obese class II</td>
+                <td class="borderleft">35 - 40</td>
+            </tr>
+            <tr class="tablerow">
+                <td class="cornerleft">Obese class III</td>
+                <td class="cornerright">>40</td>
+            </tr>
+        </table><br>
+        
+        <h2 class="title">Ideal Weight</h2>
+        
+        <p id="text">
+            The World Health Organization's (WHO) recommended healthy BMI range is 18.5 - 25 for both male and female. Based on the BMI range, it is possible to find out a healthy weight for any given height. 
+            BMI is a commonly used metric for determining IBW (ideal bodyweight). It is widely used in the medical field as a quick indicator of possible health complications. Generally, the higher the BMI, the higher the chance 
+            a person will suffer from health problems. It is an indicator used by doctors to advise their patients of potential health problems, especially 
+            if there is a noticeable progressive increase in their BMI, and is currently the official metric for classifying individuals according to different obesity levels.  
+        </p>
+        <br>
+        
+        <p id="text">Your IBW based on BMI: <span id="result2"></span>  <span id="result3"></span> 
+        </p><br>
+        
+        <h2 class="title">Risks associated with being overweight</h2>
+        
+        <p id="text">
+        Being overweight increases the risk of a number of serious diseases and health conditions. Below is a list of said risks, according to the Centers for Disease Control and Prevention (CDC):<br>
+        High blood pressure; 
+        Higher levels of LDL cholesterol, which is widely considered "bad cholesterol," lower levels of HDL cholesterol, considered to be good cholesterol in moderation, and high levels of triglycerides;
+        Type II diabetes;
+        Coronary heart disease;
+        Stroke;
+        Gallbladder disease;
+        Osteoarthritis, a type of joint disease caused by breakdown of joint cartilage;
+        Sleep apnea and breathing problems;
+        Certain cancers (endometrial, breast, colon, kidney, gallbladder, liver);
+        Low quality of life;
+        Mental illnesses such as clinical depression, anxiety, and others;
+        Body pains and difficulty with certain physical functions;
+        Generally, an increased risk of mortality compared to those with a healthy BMI.
+        </p><br>
+        
+        <h2 class="title">Risks associated with being underweight</h2>
+        
+        <p id="text">
+        Being underweight has its own associated risks:
+        Malnutrition can cause vitamin deficiencies and anemia (lowered ability to carry blood vessels);
+        Osteoporosis, a disease that causes bone weakness, increasing the risk of breaking a bone;
+        A decrease in immune function;
+        Growth and development issues, particularly in children and teenagers;
+        Possible reproductive issues for women due to hormonal imbalances that can disrupt the menstrual cycle. Underweight women also have a higher chance of miscarriage in the first trimester;
+        Potential complications as a result of surgery;
+        Generally, an increased risk of mortality compared to those with a healthy BMI.
+        </p><br><br><br><br>      
+    </body>
+</html>

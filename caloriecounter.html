@@ -1,0 +1,2192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="health and nutrition">
+        <meta name="author" content="remyduijn">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>My Webpage</title>
+
+        <script>
+            function calculateMealPlan()
+            {
+                var dailycalories = document.getElementById("inputDailycalories").value;
+                var breakfast1 = document.getElementById("inputBreakfast1");
+                var shake1 = 100; var shake2 = 130; var shake3 = 150; var shake4 = 85; var shake5 = 30; var shake6 = 40; var shake7 = 10; var shake8 = 2; var shake9 = 4; 
+                var cal1 = 381; var cal2 = 120; var cal3 = 67.5; var cal4 = 41; var cal5 = 210; var cal6 = 10.4; var cal7 = 49.74; var cal8 = 6.7; var cal9 = 11.12; 
+                var carb1 = 62; var carb2 = 26; var carb3 = 5.25; var carb4 = 6.7; var carb5 = 3; var carb6 = 0.36; var carb7 = 0.76; var carb8 = 1.44; var carb9 = 1.52; 
+                var fat1 = 7; var fat2 = 0.4; var fat3 = 3; var fat4 = 0.85; var fat5 = 21; var fat6 = 0.24; var fat7 = 3.5; var fat8 = 0.084; var fat9 = 0.13; 
+                var protein1 = 13.5; var protein2 = 1.4; var protein3 = 4.35; var protein4 = 0.7; var protein5 = 6; var protein6 = 1.2; var protein7 = 2.33; var protein8 = 0.18; var protein9 = 1.58; 
+
+                var breakfast2 = document.getElementById("inputBreakfast2");
+                var pan1 = 100; var pan2 = 130; var pan3 = 50; var pan4 = 280; var pan5 = 15; var pan6 = 15; var pan7 = 15; var pan8 = 4; var pan9 = 4; var pan10 = 10;
+                var cal1a = 381; var cal2a = 120; var cal3a = 28.5; var cal4a = 126; var cal5a = 3.75; var cal6a = 132.6; var cal7a = 45.6; var cal8a = 0; var cal9a = 9.88; var cal10a = 49.74; 
+                var carb1a = 62; var carb2a = 26; var carb3a = 7; var carb4a = 9.79; var carb5a = 1.26; var carb6a = 0; var carb7a = 12.3; var carb8a = 0; var carb9a = 3.24; var carb10a = 0.76;
+                var fat1a = 7; var fat2a = 0.4; var fat3a = 0.15; var fat4a = 5.59; var fat5a = 0.015; var fat6a = 15; var fat7a = 0; var fat8a = 0; var fat9a = 0.048; var fat10a = 3.5;
+                var protein1a = 13.5; var protein2a = 1.4; var protein3a = 0.35; var protein4a = 8.12; var protein5a = 0.06; var protein6a = 0; var protein7a = 0.045; var protein8a = 0; var protein9a = 0.16; var protein10a = 2.33;
+
+                var breakfast3 = document.getElementById("inputBreakfast3");
+                var bowl1 = 100; var bowl2 = 130; var bowl3 = 40; var bowl4 = 450; var bowl5 = 15; var bowl6 = 10; var bowl7 = 4; var bowl8 = 5; 
+                var cal1b = 381; var cal2b = 120; var cal3b = 22.8; var cal4b = 202.5; var cal5b = 87; var cal6b = 49.74; var cal7b = 9.88; var cal8b = 25; 
+                var carb1b = 62; var carb2b = 26; var carb3b = 5.6; var carb4b = 15.75; var carb5b = 3.3; var carb6b = 0.76; var carb7b = 3.24; var carb8b = 2.4; 
+                var fat1b = 7; var fat2b = 0.4; var fat3b = 0.12; var fat4b = 9; var fat5b = 7.5; var fat6b = 3.5; var fat7b = 0.048; var fat8b = 1.75; 
+                var protein1b = 13.5; var protein2b = 1.4; var protein3b = 0.28; var protein4b = 13.05; var protein5b = 3.15; var protein6b = 2.33; var protein7b = 0.16; var protein8b = 0.145; 
+
+                var oatmeal = (dailycalories / 2600) * shake1;
+                var banana = (dailycalories / 2600) * shake2;
+                var soy = (dailycalories / 2600) * shake3;
+                var orange = (dailycalories / 2600) * shake4;
+                var walnuts = (dailycalories / 2600) * shake5;
+                var spinach = (dailycalories / 2600) * shake6;
+                var seeds = (dailycalories / 2600) * shake7;
+                var ginger = (dailycalories / 2600) * shake8;
+                var powder = (dailycalories / 2600) * shake9;
+
+                var oatmeal2 = (dailycalories / 2600) * cal1;
+                var banana2 = (dailycalories / 2600) * cal2;
+                var soy2 = (dailycalories / 2600) * cal3;
+                var orange2 = (dailycalories / 2600) * cal4;
+                var walnuts2 = (dailycalories / 2600) * cal5;
+                var spinach2 = (dailycalories / 2600) * cal6;
+                var seeds2 = (dailycalories / 2600) * cal7;
+                var ginger2 = (dailycalories / 2600) * cal8;
+                var powder2 = (dailycalories / 2600) * cal9;
+
+                var oatmeal3 = (dailycalories / 2600) * carb1;
+                var banana3 = (dailycalories / 2600) * carb2;
+                var soy3 = (dailycalories / 2600) * carb3;
+                var orange3 = (dailycalories / 2600) * carb4;
+                var walnuts3 = (dailycalories / 2600) * carb5;
+                var spinach3 = (dailycalories / 2600) * carb6;
+                var seeds3 = (dailycalories / 2600) * carb7;
+                var ginger3 = (dailycalories / 2600) * carb8;
+                var powder3 = (dailycalories / 2600) * carb9;
+
+                var oatmeal4 = (dailycalories / 2600) * fat1;
+                var banana4 = (dailycalories / 2600) * fat2;
+                var soy4 = (dailycalories / 2600) * fat3;
+                var orange4 = (dailycalories / 2600) * fat4;
+                var walnuts4 = (dailycalories / 2600) * fat5;
+                var spinach4 = (dailycalories / 2600) * fat6;
+                var seeds4 = (dailycalories / 2600) * fat7;
+                var ginger4 = (dailycalories / 2600) * fat8;
+                var powder4 = (dailycalories / 2600) * fat9;
+
+                var oatmeal5 = (dailycalories / 2600) * protein1;
+                var banana5 = (dailycalories / 2600) * protein2;
+                var soy5 = (dailycalories / 2600) * protein3;
+                var orange5 = (dailycalories / 2600) * protein4;
+                var walnuts5 = (dailycalories / 2600) * protein5;
+                var spinach5 = (dailycalories / 2600) * protein6;
+                var seeds5 = (dailycalories / 2600) * protein7;
+                var ginger5 = (dailycalories / 2600) * protein8;
+                var powder5 = (dailycalories / 2600) * protein9;
+
+                var totalcal = oatmeal2 + banana2 + soy2 + orange2 + walnuts2 + spinach2 + seeds2 + ginger2 + powder2;
+                var totalcarb = oatmeal3 + banana3 + soy3 + orange3 + walnuts3 + spinach3 + seeds3 + ginger3 + powder3;
+                var totalfat = oatmeal4 + banana4 + soy4 + orange4 + walnuts4 + spinach4 + seeds4 + ginger4 + powder4;
+                var totalprotein = oatmeal5 + banana5 + soy5 + orange5 + walnuts5 + spinach5 + seeds5 + ginger5 + powder5;
+
+                if (breakfast1.checked == true)
+                {
+                    document.getElementById("result").innerHTML = 'Oatmeal<br>Banana<br>Soy milk<br>Orange juice<br>Walnuts<br>Spinach<br>Seeds (flax, chia & hemp)<br>Ginger<br>Moringa & matcha powder';
+                    document.getElementById("result2").innerHTML = oatmeal.toFixed(0) + 'g' + '<br>' + banana.toFixed(0) + 'g' + '<br>' + soy.toFixed(0) + 'ml' + '<br>' + orange.toFixed(0) + 'ml' + '<br>' + walnuts.toFixed(0) + 'g' + '<br>' + spinach.toFixed(0) + 'g' + '<br>' + seeds.toFixed(1) + 'g' + '<br>' + ginger.toFixed(1) + 'g' + '<br>' + powder.toFixed(1) + 'g' + '<br><br>';
+                    document.getElementById("result3").innerHTML = oatmeal2.toFixed(0) + '<br>' + banana2.toFixed(0) + '<br>' + soy2.toFixed(0) + '<br>' + orange2.toFixed(0) + '<br>' + walnuts2.toFixed(0) + '<br>' + spinach2.toFixed(0) + '<br>' + seeds2.toFixed(0) + '<br>' + ginger2.toFixed(0) + '<br>' + powder2.toFixed(0) + '<br><br>';
+                    document.getElementById("result4").innerHTML = oatmeal3.toFixed(1) + '<br>' + banana3.toFixed(1) + '<br>' + soy3.toFixed(1) + '<br>' + orange3.toFixed(1) + '<br>' + walnuts3.toFixed(1) + '<br>' + spinach3.toFixed(1) + '<br>' + seeds3.toFixed(1) + '<br>' + ginger3.toFixed(1) + '<br>' + powder3.toFixed(1) + '<br><br>'; 
+                    document.getElementById("result5").innerHTML = oatmeal4.toFixed(1) + '<br>' + banana4.toFixed(1) + '<br>' + soy4.toFixed(1) + '<br>' + orange4.toFixed(1) + '<br>' + walnuts4.toFixed(1) + '<br>' + spinach4.toFixed(1) + '<br>' + seeds4.toFixed(1) + '<br>' + ginger4.toFixed(1) + '<br>' + powder4.toFixed(1) + '<br><br>';
+                    document.getElementById("result6").innerHTML = oatmeal5.toFixed(1) + '<br>' + banana5.toFixed(1) + '<br>' + soy5.toFixed(1) + '<br>' + orange5.toFixed(1) + '<br>' + walnuts5.toFixed(1) + '<br>' + spinach5.toFixed(1) + '<br>' + seeds5.toFixed(1) + '<br>' + ginger5.toFixed(1) + '<br>' + powder5.toFixed(1) + '<br><br>';
+    
+                    document.getElementById("result7").innerHTML = totalcal.toFixed(0);
+                    document.getElementById("result8").innerHTML = totalcarb.toFixed(1);
+                    document.getElementById("result9").innerHTML = totalfat.toFixed(1);
+                    document.getElementById("result10").innerHTML = totalprotein.toFixed(1);
+                }
+                
+                var oats = (dailycalories / 2600) * pan1;
+                var banaan = (dailycalories / 2600) * pan2;
+                var berry = (dailycalories / 2600) * pan3;
+                var soi = (dailycalories / 2600) * pan4;
+                var lime = (dailycalories / 2600) * pan5;
+                var oil = (dailycalories / 2600) * pan6;
+                var honey = (dailycalories / 2600) * pan7;
+                var baking = (dailycalories / 2600) * pan8;
+                var cinnamon = (dailycalories / 2600) * pan9;
+                var zaad = (dailycalories / 2600) * pan10;
+                
+                var oats2 = (dailycalories / 2600) * cal1a;
+                var banaan2 = (dailycalories / 2600) * cal2a;
+                var berry2 = (dailycalories / 2600) * cal3a;
+                var soi2 = (dailycalories / 2600) * cal4a;
+                var lime2 = (dailycalories / 2600) * cal5a;
+                var oil2 = (dailycalories / 2600) * cal6a;
+                var honey2 = (dailycalories / 2600) * cal7a;
+                var baking2 = (dailycalories / 2600) * cal8a;
+                var cinnamon2 = (dailycalories / 2600) * cal9a;
+                var zaad2 = (dailycalories / 2600) * cal10a;
+                
+                var oats3 = (dailycalories / 2600) * carb1a;
+                var banaan3 = (dailycalories / 2600) * carb2a;
+                var berry3 = (dailycalories / 2600) * carb3a;
+                var soi3 = (dailycalories / 2600) * carb4a;
+                var lime3 = (dailycalories / 2600) * carb5a;
+                var oil3 = (dailycalories / 2600) * carb6a;
+                var honey3 = (dailycalories / 2600) * carb7a;
+                var baking3 = (dailycalories / 2600) * carb8a;
+                var cinnamon3 = (dailycalories / 2600) * carb9a;
+                var zaad3 = (dailycalories / 2600) * carb10a;
+                
+                var oats4 = (dailycalories / 2600) * fat1a;
+                var banaan4 = (dailycalories / 2600) * fat2a;
+                var berry4 = (dailycalories / 2600) * fat3a;
+                var soi4 = (dailycalories / 2600) * fat4a;
+                var lime4 = (dailycalories / 2600) * fat5a;
+                var oil4 = (dailycalories / 2600) * fat6a;
+                var honey4 = (dailycalories / 2600) * fat7a;
+                var baking4 = (dailycalories / 2600) * fat8a;
+                var cinnamon4 = (dailycalories / 2600) * fat9a;
+                var zaad4 = (dailycalories / 2600) * fat10a;
+
+                var oats5 = (dailycalories / 2600) * protein1a;
+                var banaan5 = (dailycalories / 2600) * protein2a;
+                var berry5 = (dailycalories / 2600) * protein3a;
+                var soi5 = (dailycalories / 2600) * protein4a;
+                var lime5 = (dailycalories / 2600) * protein5a;
+                var oil5 = (dailycalories / 2600) * protein6a;
+                var honey5 = (dailycalories / 2600) * protein7a;
+                var baking5 = (dailycalories / 2600) * protein8a;
+                var cinnamon5 = (dailycalories / 2600) * protein9a;
+                var zaad5 = (dailycalories / 2600) * protein10a;
+
+                var totalcal2 = oats2 + banaan2 + berry2 + soi2 + lime2 + oil2 + honey2 + baking2 + cinnamon2 + zaad2;
+                var totalcarb2 = oats3 + banaan3 + berry3 + soi3 + lime3 + oil3 + honey3 + baking3 + cinnamon3 + zaad3;
+                var totalfat2 = oats4 + banaan4 + berry4 + soi4 + lime4 + oil4 + honey4 + baking4 + cinnamon4 + zaad4;
+                var totalprotein2 = oats5 + banaan5 + berry5 + soi5 + lime5 + oil5 + honey5 + baking5 + cinnamon5 + zaad5;
+
+                if (breakfast2.checked == true)
+                {
+                    document.getElementById("result").innerHTML = 'Oatmeal<br>Banana<br>Blueberries<br>Soy milk<br>Lime juice<br>Olive oil<br>Honey<br>Baking soda<br>Cinnamon<br>Seeds (flax & chia)';
+                    document.getElementById("result2").innerHTML = oats.toFixed(0) + 'g' + '<br>' + banaan.toFixed(0) + 'g' + '<br>'+ berry.toFixed(0) + 'g' + '<br>' + soi.toFixed(0) + 'ml' + '<br>' + lime.toFixed(0) + 'ml' + '<br>' + oil.toFixed(0) + 'ml' + '<br>' + honey.toFixed(0) + 'ml' + '<br>' + baking.toFixed(1) + 'g' + '<br>' + cinnamon.toFixed(1) + 'g' + '<br>' + zaad.toFixed(1) + 'g' + '<br>';
+                    document.getElementById("result3").innerHTML = oats2.toFixed(0) + '<br>' + banaan2.toFixed(0) + '<br>' + berry2.toFixed(0) + '<br>' + soi2.toFixed(0) + '<br>' + lime2.toFixed(0) + '<br>' + oil2.toFixed(0) + '<br>' + honey2.toFixed(0) + '<br>' + baking2.toFixed(0) + '<br>' + cinnamon2.toFixed(0) + '<br>' + zaad2.toFixed(0) + '<br>';
+                    document.getElementById("result4").innerHTML = oats3.toFixed(1) + '<br>' + banaan3.toFixed(1) + '<br>' + berry3.toFixed(1) + '<br>' + soi3.toFixed(1) + '<br>' + lime3.toFixed(1) + '<br>' + oil3.toFixed(1) + '<br>' + honey3.toFixed(1) + '<br>' + baking3.toFixed(1) + '<br>' + cinnamon3.toFixed(1) + '<br>' + zaad3.toFixed(1) + '<br>'; 
+                    document.getElementById("result5").innerHTML = oats4.toFixed(1) + '<br>' + banaan4.toFixed(1) + '<br>' + berry4.toFixed(1) + '<br>' + soi4.toFixed(1) + '<br>' + lime4.toFixed(1) + '<br>' + oil4.toFixed(1) + '<br>' + honey4.toFixed(1) + '<br>' + baking4.toFixed(1) + '<br>' + cinnamon4.toFixed(1) + '<br>' + zaad4.toFixed(1) + '<br>';
+                    document.getElementById("result6").innerHTML = oats5.toFixed(1) + '<br>' + banaan5.toFixed(1) + '<br>' + berry5.toFixed(1) + '<br>' + soi5.toFixed(1) + '<br>' + lime5.toFixed(1) + '<br>' + oil5.toFixed(1) + '<br>' + honey5.toFixed(1) + '<br>' + baking5.toFixed(1) + '<br>' + cinnamon5.toFixed(1) + '<br>' + zaad5.toFixed(1) + '<br>';
+    
+                    document.getElementById("result7").innerHTML = totalcal2.toFixed(0);
+                    document.getElementById("result8").innerHTML = totalcarb2.toFixed(1);
+                    document.getElementById("result9").innerHTML = totalfat2.toFixed(1);
+                    document.getElementById("result10").innerHTML = totalprotein2.toFixed(1);
+                }
+                
+                var haver = (dailycalories / 2600) * bowl1;
+                var banano = (dailycalories / 2600) * bowl2;
+                var bes = (dailycalories / 2600) * bowl3;
+                var milk = (dailycalories / 2600) * bowl4;
+                var almond = (dailycalories / 2600) * bowl5;
+                var seed = (dailycalories / 2600) * bowl6;
+                var kaneel = (dailycalories / 2600) * bowl7;
+                var coconut = (dailycalories / 2600) * bowl8;
+                
+                var haver2 = (dailycalories / 2600) * cal1b;
+                var banano2 = (dailycalories / 2600) * cal2b;
+                var bes2 = (dailycalories / 2600) * cal3b;
+                var milk2 = (dailycalories / 2600) * cal4b;
+                var almond2 = (dailycalories / 2600) * cal5b;
+                var seed2 = (dailycalories / 2600) * cal6b;
+                var kaneel2 = (dailycalories / 2600) * cal7b;
+                var coconut2 = (dailycalories / 2600) * cal8b;
+                
+                var haver3 = (dailycalories / 2600) * carb1b;
+                var banano3 = (dailycalories / 2600) * carb2b;
+                var bes3 = (dailycalories / 2600) * carb3b;
+                var milk3 = (dailycalories / 2600) * carb4b;
+                var almond3 = (dailycalories / 2600) * carb5b;
+                var seed3 = (dailycalories / 2600) * carb6b;
+                var kaneel3 = (dailycalories / 2600) * carb7b;
+                var coconut3 = (dailycalories / 2600) * carb8b;
+                
+                var haver4 = (dailycalories / 2600) * fat1b;
+                var banano4 = (dailycalories / 2600) * fat2b;
+                var bes4 = (dailycalories / 2600) * fat3b;
+                var milk4 = (dailycalories / 2600) * fat4b;
+                var almond4 = (dailycalories / 2600) * fat5b;
+                var seed4 = (dailycalories / 2600) * fat6b;
+                var kaneel4 = (dailycalories / 2600) * fat7b;
+                var coconut4 = (dailycalories / 2600) * fat8b;
+                
+                var haver5 = (dailycalories / 2600) * protein1b;
+                var banano5 = (dailycalories / 2600) * protein2b;
+                var bes5 = (dailycalories / 2600) * protein3b;
+                var milk5 = (dailycalories / 2600) * protein4b;
+                var almond5 = (dailycalories / 2600) * protein5b;
+                var seed5 = (dailycalories / 2600) * protein6b;
+                var kaneel5 = (dailycalories / 2600) * protein7b;
+                var coconut5 = (dailycalories / 2600) * protein8b;
+
+                var totalcal3 = haver2 + banano2 + bes2 + milk2 + almond2 + seed2 + kaneel2 + coconut2;
+                var totalcarb3 = haver3 + banano3 + bes3 + milk3 + almond3 + seed3 + kaneel3 + coconut3;
+                var totalfat3 = haver4 + banano4 + bes4 + milk4 + almond4 + seed4 + kaneel4 + coconut4;
+                var totalprotein3 = haver5 + banano5 + bes5 + milk5 + almond5 + seed5 + kaneel5 + coconut5;
+
+                if (breakfast3.checked == true)
+                {
+                    document.getElementById("result").innerHTML = 'Oatmeal<br>Banana<br>Blueberries<br>Soy milk<br>Almonds<br>Seeds (flax & chia)<br>Cinnamon<br>Coconut shreds';
+                    document.getElementById("result2").innerHTML = haver.toFixed(0) + 'g' + '<br>' + banano.toFixed(0) + 'g' + '<br>'+ bes.toFixed(0) + 'g' + '<br>' + milk.toFixed(0) + 'ml' + '<br>' + almond.toFixed(0) + 'g' + '<br>' + seed.toFixed(1) + 'g' + '<br>' + kaneel.toFixed(1) + 'g' + '<br>' + coconut.toFixed(1) + 'g';
+                    document.getElementById("result3").innerHTML = haver2.toFixed(0) + '<br>' + banano2.toFixed(0) + '<br>' + bes2.toFixed(0) + '<br>' + milk2.toFixed(0) + '<br>' + almond2.toFixed(0) + '<br>' + seed2.toFixed(0) + '<br>' + kaneel2.toFixed(0) + '<br>' + coconut2.toFixed(0);
+                    document.getElementById("result4").innerHTML = haver3.toFixed(1) + '<br>' + banano3.toFixed(1) + '<br>' + bes3.toFixed(1) + '<br>' + milk3.toFixed(1) + '<br>' + almond3.toFixed(1) + '<br>' + seed3.toFixed(1) + '<br>' + kaneel3.toFixed(1) + '<br>' + coconut3.toFixed(1); 
+                    document.getElementById("result5").innerHTML = haver4.toFixed(1) + '<br>' + banano4.toFixed(1) + '<br>' + bes4.toFixed(1) + '<br>' + milk4.toFixed(1) + '<br>' + almond4.toFixed(1) + '<br>' + seed4.toFixed(1) + '<br>' + kaneel4.toFixed(1) + '<br>' + coconut4.toFixed(1);
+                    document.getElementById("result6").innerHTML = haver5.toFixed(1) + '<br>' + banano5.toFixed(1) + '<br>' + bes5.toFixed(1) + '<br>' + milk5.toFixed(1) + '<br>' + almond5.toFixed(1) + '<br>' + seed5.toFixed(1) + '<br>' + kaneel5.toFixed(1) + '<br>' + coconut5.toFixed(1);
+    
+                    document.getElementById("result7").innerHTML = totalcal3.toFixed(0);
+                    document.getElementById("result8").innerHTML = totalcarb3.toFixed(1);
+                    document.getElementById("result9").innerHTML = totalfat3.toFixed(1);
+                    document.getElementById("result10").innerHTML = totalprotein3.toFixed(1);
+                }
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                var lunch1 = document.getElementById("inputLunch1");
+                var toast1 = 140; var toast2 = 150; var toast3 = 20; var toast4 = 40; var toast5 = 70; var toast6 = 16; 
+                var cal1c = 320; var cal2c = 298.33; var cal3c = 5; var cal4c = 8.8; var cal5c = 16; var cal6c = 4; 
+                var carb1c = 54.8; var carb2c = 8.67; var carb3c = 0.74; var carb4c = 1.32; var carb5c = 2.1; var carb6c = 0.3; 
+                var fat1c = 3.2; var fat2c = 23.25; var fat3c = 0.14; var fat4c = 0.12; var fat5c = 0.4; var fat6c = 0; 
+                var protein1c = 15.6; var protein2c = 2.83; var protein3c = 0.52; var protein4c = 1.24; var protein5c = 0.5; var protein6c = 0.1; 
+
+                var lunch2 = document.getElementById("inputLunch2");
+                var soup1 = 72; var soup2 = 75; var soup3 = 50; var soup4 = 20; var soup5 = 100; var soup6 = 225; var soup7 = 10; var soup8 = 15; var soup9= 2.5; var soup10 = 2; var soup11 = 70; 
+                var cal1d = 243; var cal2d = 30; var cal3d = 20; var cal4d = 8; var cal5d = 36; var cal6d = 11.25; var cal7d = 2.5; var cal8d = 132.6; var cal9d = 3.725; var cal10d = 6.24; var cal11d = 160; 
+                var carb1d = 20.325; var carb2d = 7.2; var carb3d = 4.65; var carb4d = 1.76; var carb5d = 2; var carb6d = 2.025; var carb7d = 0.84; var carb8d = 0; var carb9d = 0.825; var carb10d = 1.34; var carb11d = 27.4; 
+                var fat1d = 0.75; var fat2d = 0.15; var fat3d = 0.05; var fat4d = 0.08; var fat5d = 2.7; var fat6d = 0.225; var fat7d = 0.01; var fat8d = 15; var fat9d = 0.013; var fat10d = 0.066; var fat11d = 1.6; 
+                var protein1d = 21.45; var protein2d = 0.675; var protein3d = 0.55; var protein4d = 0.38; var protein5d = 0.6; var protein6d = 0.45; var protein7d = 0.04; var protein8d = 0; var protein9d = 0.16; var protein10d = 0.194; var protein11d = 7.8; 
+
+                var lunch3 = document.getElementById("inputLunch3");
+                var salad1 = 85; salad2 = 140; var salad3 = 38; var salad4 = 66; var salad5 = 15; var salad6 = 5; var salad7 = 35; var salad8 = 6.66; var salad9 = 4; var salad10 = 15;
+                var cal1e = 301.75; cal2e = 92; var cal3e = 52.82; var cal4e = 16.5; var cal5e = 3.45; var cal6e = 1.15; var cal7e = 14; var cal8e = 23.3; var cal9e = 15.5; var cal10e = 132.6;
+                var carb1e = 59.5; carb2e = 20; var carb3e = 8.74; var carb4e = 3.25; var carb5e = 0.54; var carb6e = 0.185; var carb7e = 3.255; var carb8e = 2.5; var carb9e = 3.1; var carb10e = 0;
+                var fat1e = 3.145; fat2e = 0.3; var fat3e = 1.064; var fat4e = 0.175; var fat5e = 0.06; var fat6e = 0.025; var fat7e = 0.035; var fat8e = 1.5; var fat9e = 0.4; var fat10e = 15;
+                var protein1e = 11.05; protein2e = 0.8; var protein3e = 2.7; var protein4e = 1.275; var protein5e = 0.435; var protein6e = 0.105; var protein7e = 0.385; var protein8e = 1.1; var protein9e = 0.6; var protein10e = 0;
+
+                var bread = (dailycalories / 2600) * toast1;
+                var avocado = (dailycalories / 2600) * toast2;
+                var arugula = (dailycalories / 2600) * toast3;
+                var mushroom = (dailycalories / 2600) * toast4;
+                var tomato = (dailycalories / 2600) * toast5;
+                var radish = (dailycalories / 2600) * toast6;
+                
+                var bread2 = (dailycalories / 2600) * cal1c;
+                var avocado2 = (dailycalories / 2600) * cal2c;
+                var arugula2 = (dailycalories / 2600) * cal3c;
+                var mushroom2 = (dailycalories / 2600) * cal4c;
+                var tomato2 = (dailycalories / 2600) * cal5c;
+                var radish2 = (dailycalories / 2600) * cal6c;
+                
+                var bread3 = (dailycalories / 2600) * carb1c;
+                var avocado3 = (dailycalories / 2600) * carb2c;
+                var arugula3 = (dailycalories / 2600) * carb3c;
+                var mushroom3 = (dailycalories / 2600) * carb4c;
+                var tomato3 = (dailycalories / 2600) * carb5c;
+                var radish3 = (dailycalories / 2600) * carb6c;
+
+                var bread4 = (dailycalories / 2600) * fat1c;
+                var avocado4 = (dailycalories / 2600) * fat2c;
+                var arugula4 = (dailycalories / 2600) * fat3c;
+                var mushroom4 = (dailycalories / 2600) * fat4c;
+                var tomato4 = (dailycalories / 2600) * fat5c;
+                var radish4 = (dailycalories / 2600) * fat6c;
+                
+                var bread5 = (dailycalories / 2600) * protein1c;
+                var avocado5 = (dailycalories / 2600) * protein2c;
+                var arugula5 = (dailycalories / 2600) * protein3c;
+                var mushroom5 = (dailycalories / 2600) * protein4c;
+                var tomato5 = (dailycalories / 2600) * protein5c;
+                var radish5 = (dailycalories / 2600) * protein6c;
+                
+                var totalcal4 = bread2 + avocado2 + arugula2 + mushroom2 + tomato2 + radish2;
+                var totalcarb4 = bread3 + avocado3 + arugula3 + mushroom3 + tomato3 + radish3;
+                var totalfat4 = bread4 + avocado4 + arugula4 + mushroom4 + tomato4 + radish4;
+                var totalprotein4 = bread5 + avocado5 + arugula5 + mushroom5 + tomato5 + radish5;
+
+                if (lunch1.checked == true)
+                {
+                    document.getElementById("result11").innerHTML = 'Whole grain bread<br>Avocado<br>Arugula<br>Mushrooms<br>Tomato<br>Radish';
+                    document.getElementById("result12").innerHTML = bread.toFixed(0) + 'g' + '<br>' + avocado.toFixed(0) + 'g' + '<br>' + arugula.toFixed(0) + 'g' + '<br>' + mushroom.toFixed(0) + 'g' + '<br>' + tomato.toFixed(0) + 'g' + '<br>' + radish.toFixed(0) + 'g';
+                    document.getElementById("result13").innerHTML = bread2.toFixed(0) + '<br>' + avocado2.toFixed(0) + '<br>' + arugula2.toFixed(0) + '<br>' + mushroom2.toFixed(0) + '<br>' + tomato2.toFixed(0) + '<br>' + radish2.toFixed(0);
+                    document.getElementById("result14").innerHTML = bread3.toFixed(1) + '<br>' + avocado3.toFixed(1) + '<br>' + arugula3.toFixed(1) + '<br>' + mushroom3.toFixed(1) + '<br>' + tomato3.toFixed(1) + '<br>' + radish3.toFixed(1); 
+                    document.getElementById("result15").innerHTML = bread4.toFixed(1) + '<br>' + avocado4.toFixed(1) + '<br>' + arugula4.toFixed(1) + '<br>' + mushroom4.toFixed(1) + '<br>' + tomato4.toFixed(1) + '<br>' + radish4.toFixed(1);
+                    document.getElementById("result16").innerHTML = bread5.toFixed(1) + '<br>' + avocado5.toFixed(1) + '<br>' + arugula5.toFixed(1) + '<br>' + mushroom5.toFixed(1) + '<br>' + tomato5.toFixed(1) + '<br>' + radish5.toFixed(1);
+    
+                    document.getElementById("result17").innerHTML = totalcal4.toFixed(0);
+                    document.getElementById("result18").innerHTML = totalcarb4.toFixed(1);
+                    document.getElementById("result19").innerHTML = totalfat4.toFixed(1);
+                    document.getElementById("result20").innerHTML = totalprotein4.toFixed(1);
+                }
+
+                var linzen = (dailycalories / 2600) * soup1;
+                var carrot = (dailycalories / 2600) * soup2;
+                var onion = (dailycalories / 2600) * soup3;
+                var pepper = (dailycalories / 2600) * soup4;
+                var coco = (dailycalories / 2600) * soup5;
+                var broth = (dailycalories / 2600) * soup6;
+                var limoen = (dailycalories / 2600) * soup7;
+                var olie = (dailycalories / 2600) * soup8;
+                var garlic = (dailycalories / 2600) * soup9;
+                var turmeric = (dailycalories / 2600) * soup10;
+                var brood = (dailycalories / 2600) * soup11;
+
+                var linzen2 = (dailycalories / 2600) * cal1d;
+                var carrot2 = (dailycalories / 2600) * cal2d;
+                var onion2 = (dailycalories / 2600) * cal3d;
+                var pepper2 = (dailycalories / 2600) * cal4d;
+                var coco2 = (dailycalories / 2600) * cal5d;
+                var broth2 = (dailycalories / 2600) * cal6d;
+                var limoen2 = (dailycalories / 2600) * cal7d;
+                var olie2 = (dailycalories / 2600) * cal8d;
+                var garlic2 = (dailycalories / 2600) * cal9d;
+                var turmeric2 = (dailycalories / 2600) * cal10d;
+                var brood2 = (dailycalories / 2600) * cal11d;
+
+                var linzen3 = (dailycalories / 2600) * carb1d;
+                var carrot3 = (dailycalories / 2600) * carb2d;
+                var onion3 = (dailycalories / 2600) * carb3d;
+                var pepper3 = (dailycalories / 2600) * carb4d;
+                var coco3 = (dailycalories / 2600) * carb5d;
+                var broth3 = (dailycalories / 2600) * carb6d;
+                var limoen3 = (dailycalories / 2600) * carb7d;
+                var olie3 = (dailycalories / 2600) * carb8d;
+                var garlic3 = (dailycalories / 2600) * carb9d;
+                var turmeric3 = (dailycalories / 2600) * carb10d;
+                var brood3 = (dailycalories / 2600) * carb11d;
+
+                var linzen4 = (dailycalories / 2600) * fat1d;
+                var carrot4 = (dailycalories / 2600) * fat2d;
+                var onion4 = (dailycalories / 2600) * fat3d;
+                var pepper4 = (dailycalories / 2600) * fat4d;
+                var coco4 = (dailycalories / 2600) * fat5d;
+                var broth4 = (dailycalories / 2600) * fat6d;
+                var limoen4 = (dailycalories / 2600) * fat7d;
+                var olie4 = (dailycalories / 2600) * fat8d;
+                var garlic4 = (dailycalories / 2600) * fat9d;
+                var turmeric4 = (dailycalories / 2600) * fat10d;
+                var brood4 = (dailycalories / 2600) * fat11d;
+
+                var linzen5 = (dailycalories / 2600) * protein1d;
+                var carrot5 = (dailycalories / 2600) * protein2d;
+                var onion5 = (dailycalories / 2600) * protein3d;
+                var pepper5 = (dailycalories / 2600) * protein4d;
+                var coco5 = (dailycalories / 2600) * protein5d;
+                var broth5 = (dailycalories / 2600) * protein6d;
+                var limoen5 = (dailycalories / 2600) * protein7d;
+                var olie5 = (dailycalories / 2600) * protein8d;
+                var garlic5 = (dailycalories / 2600) * protein9d;
+                var turmeric5 = (dailycalories / 2600) * protein10d;
+                var brood5 = (dailycalories / 2600) * protein11d;
+
+                var totalcal5 = linzen2 + carrot2 + coco2 + broth2 + garlic2 + limoen2 + turmeric2 + onion2 + pepper2 + brood2 + olie2;
+                var totalcarb5 = linzen3 + carrot3 + coco3 + broth3 + garlic3 + limoen3 + turmeric3 + onion3 + pepper3 + brood3 + olie3;
+                var totalfat5 = linzen4 + carrot4 + coco4 + broth4 + garlic4 + limoen4 + turmeric4 + onion4 + pepper4 + brood4 + olie4;
+                var totalprotein5 = linzen5 + carrot5 + coco5 + broth5 + garlic5 + limoen5 + turmeric5 + onion5 + pepper5 + brood5 + olie5;
+
+                if (lunch2.checked == true)
+                {
+                    document.getElementById("result11").innerHTML = 'Lentils<br>Carrot<br>Onion<br>Red pepper<br>Coconut milk<br>Vegetable stock<br>Lime juice<br>Olive oil<br>Garlic<br>Turmeric<br>Whole grain bread';
+                    document.getElementById("result12").innerHTML = linzen.toFixed(0) + 'g' + '<br>' + carrot.toFixed(0) + 'g' + '<br>' + onion.toFixed(0) + 'g' + '<br>' + pepper.toFixed(0) + 'g' + '<br>' + coco.toFixed(0) + 'ml' + '<br>' + broth.toFixed(0) + 'ml' + '<br>' + limoen.toFixed(0) + 'ml' + '<br>' + olie.toFixed(0) + 'ml' + '<br>' + garlic.toFixed(1) + 'g' + '<br>' + turmeric.toFixed(1) + 'g' + '<br>' + brood.toFixed(0) + 'g';
+                    document.getElementById("result13").innerHTML = linzen2.toFixed(0) + '<br>' + carrot2.toFixed(0) + '<br>' + onion2.toFixed(0) + '<br>' + pepper2.toFixed(0) + '<br>' + coco2.toFixed(0) + '<br>' + broth2.toFixed(0) + '<br>' + limoen2.toFixed(0) + '<br>' + olie2.toFixed(0) + '<br>' + garlic2.toFixed(0) + '<br>' + turmeric2.toFixed(0) + '<br>' + brood2.toFixed(0);
+                    document.getElementById("result14").innerHTML = linzen3.toFixed(1) + '<br>' + carrot3.toFixed(1) + '<br>' + onion3.toFixed(1) + '<br>' + pepper3.toFixed(1) + '<br>' + coco3.toFixed(1) + '<br>' + broth3.toFixed(1) + '<br>' + limoen3.toFixed(1) + '<br>' + olie3.toFixed(1) + '<br>' + garlic3.toFixed(1) + '<br>' + turmeric3.toFixed(1) + '<br>' + brood3.toFixed(1);
+                    document.getElementById("result15").innerHTML = linzen4.toFixed(1) + '<br>' + carrot4.toFixed(1) + '<br>' + onion4.toFixed(1) + '<br>' + pepper4.toFixed(1) + '<br>' + coco4.toFixed(1) + '<br>' + broth4.toFixed(1) + '<br>' + limoen4.toFixed(1) + '<br>' + olie4.toFixed(1) + '<br>' + garlic4.toFixed(1) + '<br>' + turmeric4.toFixed(1) + '<br>' + brood4.toFixed(1);
+                    document.getElementById("result16").innerHTML = linzen5.toFixed(1) + '<br>' + carrot5.toFixed(1) + '<br>' + onion5.toFixed(1) + '<br>' + pepper5.toFixed(1) + '<br>' + coco5.toFixed(1) + '<br>' + broth5.toFixed(1) + '<br>' + limoen5.toFixed(1) + '<br>' + olie5.toFixed(1) + '<br>' + garlic5.toFixed(1) + '<br>' + turmeric5.toFixed(1) + '<br>' + brood5.toFixed(1);
+    
+                    document.getElementById("result17").innerHTML = totalcal5.toFixed(0);
+                    document.getElementById("result18").innerHTML = totalcarb5.toFixed(1);
+                    document.getElementById("result19").innerHTML = totalfat5.toFixed(1);
+                    document.getElementById("result20").innerHTML = totalprotein5.toFixed(1);
+                }
+                
+                var quinoa = (dailycalories / 2600) * salad1;
+                var mango = (dailycalories / 2600) * salad2;
+                var chickpea = (dailycalories / 2600) * salad3;
+                var cauliflower = (dailycalories / 2600) * salad4;
+                var spinazie = (dailycalories / 2600) * salad5;
+                var cilantro = (dailycalories / 2600) * salad6;
+                var ui = (dailycalories / 2600) * salad7;
+                var zaadjes = (dailycalories / 2600) * salad8;
+                var spice = (dailycalories / 2600) * salad9;
+                var olive = (dailycalories / 2600) * salad10;
+                
+                var quinoa2 = (dailycalories / 2600) * cal1e;
+                var mango2 = (dailycalories / 2600) * cal2e;
+                var chickpea2 = (dailycalories / 2600) * cal3e;
+                var cauliflower2 = (dailycalories / 2600) * cal4e;
+                var spinazie2 = (dailycalories / 2600) * cal5e;
+                var cilantro2 = (dailycalories / 2600) * cal6e;
+                var ui2 = (dailycalories / 2600) * cal7e;
+                var zaadjes2 = (dailycalories / 2600) * cal8e;
+                var spice2 = (dailycalories / 2600) * cal9e;
+                var olive2 = (dailycalories / 2600) * cal10e;
+
+                var quinoa3 = (dailycalories / 2600) * carb1e;
+                var mango3 = (dailycalories / 2600) * carb2e;
+                var chickpea3 = (dailycalories / 2600) * carb3e;
+                var cauliflower3 = (dailycalories / 2600) * carb4e;
+                var spinazie3 = (dailycalories / 2600) * carb5e;
+                var cilantro3 = (dailycalories / 2600) * carb6e;
+                var ui3 = (dailycalories / 2600) * carb7e;
+                var zaadjes3 = (dailycalories / 2600) * carb8e;
+                var spice3 = (dailycalories / 2600) * carb9e;
+                var olive3 = (dailycalories / 2600) * carb10e;
+ 
+                var quinoa4 = (dailycalories / 2600) * fat1e;
+                var mango4 = (dailycalories / 2600) * fat2e;
+                var chickpea4 = (dailycalories / 2600) * fat3e;
+                var cauliflower4 = (dailycalories / 2600) * fat4e;
+                var spinazie4 = (dailycalories / 2600) * fat5e;
+                var cilantro4 = (dailycalories / 2600) * fat6e;
+                var ui4 = (dailycalories / 2600) * fat7e;
+                var zaadjes4 = (dailycalories / 2600) * fat8e;
+                var spice4 = (dailycalories / 2600) * fat9e;
+                var olive4 = (dailycalories / 2600) * fat10e;
+ 
+                var quinoa5 = (dailycalories / 2600) * protein1e;
+                var mango5 = (dailycalories / 2600) * protein2e;
+                var chickpea5 = (dailycalories / 2600) * protein3e;
+                var cauliflower5 = (dailycalories / 2600) * protein4e;
+                var spinazie5 = (dailycalories / 2600) * protein5e;
+                var cilantro5 = (dailycalories / 2600) * protein6e;
+                var ui5 = (dailycalories / 2600) * protein7e;
+                var zaadjes5 = (dailycalories / 2600) * protein8e;
+                var spice5 = (dailycalories / 2600) * protein9e;
+                var olive5 = (dailycalories / 2600) * protein10e;
+        
+                var totalcal6 = quinoa2 + mango2 + chickpea2 + cauliflower2 + spinazie2 + cilantro2 + ui2 + zaadjes2 + spice2 + olive2;
+                var totalcarb6 = quinoa3 + mango3 + chickpea3 + cauliflower3 + spinazie3 + cilantro3 + ui3 + zaadjes3 + spice3 + olive3;
+                var totalfat6 = quinoa4 + mango4 + chickpea4 + cauliflower4 + spinazie4 + cilantro4 + ui4 + zaadjes4 + spice4 + olive4;
+                var totalprotein6 = quinoa5 + mango5 + chickpea5 + cauliflower5 + spinazie5 + cilantro5 + ui5 + zaadjes5 + spice5 + olive5;
+
+                if (lunch3.checked == true)
+                {
+                    document.getElementById("result11").innerHTML = 'Quinoa / bulgur<br>Mango<br>Chickpea<br>Cauliflower<br>Spinach<br>Coriander<br>Onion<br>Seeds (koriander,<br>mustard & cumin)<br>Spices (turmeric & curry)<br>Olive oil';
+                    document.getElementById("result12").innerHTML = quinoa.toFixed(0) + 'g' + '<br>' + mango.toFixed(0) + 'g' + '<br>' + chickpea.toFixed(0) + 'g' + '<br>' + cauliflower.toFixed(0) + 'g' + '<br>' + spinazie.toFixed(0) + 'g' + '<br>' + cilantro.toFixed(0) + 'g' + '<br>' + ui.toFixed(0) + 'g' + '<br>' + zaadjes.toFixed(1) + 'g' + '<br><br>' + spice.toFixed(1) + 'g' + '<br>' + olive.toFixed(0) + 'ml';
+                    document.getElementById("result13").innerHTML = quinoa2.toFixed(0) + '<br>' + mango2.toFixed(0) + '<br>' + chickpea2.toFixed(0) + '<br>' + cauliflower2.toFixed(0) + '<br>' + spinazie2.toFixed(0) + '<br>' + cilantro2.toFixed(0) + '<br>' + ui2.toFixed(0) + '<br>' + zaadjes2.toFixed(0) + '<br><br>' + spice2.toFixed(0) + '<br>' + olive2.toFixed(0);
+                    document.getElementById("result14").innerHTML = quinoa3.toFixed(1) + '<br>' + mango3.toFixed(1) + '<br>' + chickpea3.toFixed(1) + '<br>' + cauliflower3.toFixed(1) + '<br>' + spinazie3.toFixed(1) + '<br>' + cilantro3.toFixed(1) + '<br>' + ui3.toFixed(1) + '<br>' + zaadjes3.toFixed(1) + '<br><br>' + spice3.toFixed(1) + '<br>' + olive3.toFixed(1);
+                    document.getElementById("result15").innerHTML = quinoa4.toFixed(1) + '<br>' + mango4.toFixed(1) + '<br>' + chickpea4.toFixed(1) + '<br>' + cauliflower4.toFixed(1) + '<br>' + spinazie4.toFixed(1) + '<br>' + cilantro4.toFixed(1) + '<br>' + ui4.toFixed(1) + '<br>' + zaadjes4.toFixed(1) + '<br><br>' + spice4.toFixed(1) + '<br>' + olive4.toFixed(1);
+                    document.getElementById("result16").innerHTML = quinoa5.toFixed(1) + '<br>' + mango5.toFixed(1) + '<br>' + chickpea5.toFixed(1) + '<br>' + cauliflower5.toFixed(1) + '<br>' + spinazie5.toFixed(1) + '<br>' + cilantro5.toFixed(1) + '<br>' + ui5.toFixed(1) + '<br>' + zaadjes5.toFixed(1) + '<br><br>' + spice5.toFixed(1) + '<br>' + olive5.toFixed(1);
+    
+                    document.getElementById("result17").innerHTML = totalcal6.toFixed(0);
+                    document.getElementById("result18").innerHTML = totalcarb6.toFixed(1);
+                    document.getElementById("result19").innerHTML = totalfat6.toFixed(1);
+                    document.getElementById("result20").innerHTML = totalprotein6.toFixed(1);
+                }
+                
+                var snack1 = document.getElementById("inputSnack1");
+                var apple = (dailycalories / 2600) * 180; 
+                var cal1f = (dailycalories / 2600) * 95; 
+                var carb1f = (dailycalories / 2600) * 25; 
+                var fat1f = (dailycalories / 2600) * 0.3; 
+                var protein1f = (dailycalories / 2600) * 0.5; 
+                
+                var snack2 = document.getElementById("inputSnack2");
+                var chocolate = (dailycalories / 2600) * 18; 
+                var cal1g = (dailycalories / 2600) * 95.5; 
+                var carb1g = (dailycalories / 2600) * 8.28; 
+                var fat1g = (dailycalories / 2600) * 7.74; 
+                var protein1g = (dailycalories / 2600) * 1.404; 
+                
+                var snack3 = document.getElementById("inputSnack3");
+                var raisin = (dailycalories / 2600) * 35; 
+                var cal1h = (dailycalories / 2600) * 96; 
+                var carb1h = (dailycalories / 2600) * 18.5; 
+                var fat1h = (dailycalories / 2600) * 0.9; 
+                var protein1h = (dailycalories / 2600) * 2.7; 
+                
+                if (snack1.checked == true)
+                {
+                    document.getElementById("result21").innerHTML = 'Apple';
+                    document.getElementById("result22").innerHTML = apple.toFixed(0) + 'g';
+                    document.getElementById("result23").innerHTML = cal1f.toFixed(0);
+                    document.getElementById("result24").innerHTML = carb1f.toFixed(1); 
+                    document.getElementById("result25").innerHTML = fat1f.toFixed(1);
+                    document.getElementById("result26").innerHTML = protein1f.toFixed(1);
+                }
+                if (snack2.checked == true)
+                {
+                    document.getElementById("result21").innerHTML = 'Dark chocolate (70-85%)';
+                    document.getElementById("result22").innerHTML = chocolate.toFixed(0) + 'g';
+                    document.getElementById("result23").innerHTML = cal1g.toFixed(0);
+                    document.getElementById("result24").innerHTML = carb1g.toFixed(1); 
+                    document.getElementById("result25").innerHTML = fat1g.toFixed(1);
+                    document.getElementById("result26").innerHTML = protein1g.toFixed(1);
+                }
+                if (snack3.checked == true)
+                {
+                    document.getElementById("result21").innerHTML = 'Raisin bread';
+                    document.getElementById("result22").innerHTML = raisin.toFixed(0) + 'g';
+                    document.getElementById("result23").innerHTML = cal1h.toFixed(0);
+                    document.getElementById("result24").innerHTML = carb1h.toFixed(1); 
+                    document.getElementById("result25").innerHTML = fat1h.toFixed(1);
+                    document.getElementById("result26").innerHTML = protein1h.toFixed(1);
+                }
+                
+                
+
+                            if (lunch1.checked == true && snack1.checked == true)
+                            {
+                                var total1 = totalcal4 + cal1f;
+                                var total2 = totalcarb4 + carb1f;
+                                var total3 = totalfat4 + fat1f;
+                                var total4 = totalprotein4 + protein1f;
+                                document.getElementById("result17").innerHTML = total1.toFixed(0);
+                                document.getElementById("result18").innerHTML = total2.toFixed(1);
+                                document.getElementById("result19").innerHTML = total3.toFixed(1);
+                                document.getElementById("result20").innerHTML = total4.toFixed(1);
+                            }
+                            if (lunch1.checked == true && snack2.checked == true)
+                            {
+                                var total1 = totalcal4 + cal1g;
+                                var total2 = totalcarb4 + carb1g;
+                                var total3 = totalfat4 + fat1g;
+                                var total4 = totalprotein4 + protein1g;
+                                document.getElementById("result17").innerHTML = total1.toFixed(0);
+                                document.getElementById("result18").innerHTML = total2.toFixed(1);
+                                document.getElementById("result19").innerHTML = total3.toFixed(1);
+                                document.getElementById("result20").innerHTML = total4.toFixed(1);
+                            }
+                            if (lunch1.checked == true && snack3.checked == true)
+                            {
+                                var total1 = totalcal4 + cal1h;
+                                var total2 = totalcarb4 + carb1h;
+                                var total3 = totalfat4 + fat1h;
+                                var total4 = totalprotein4 + protein1h;
+                                document.getElementById("result17").innerHTML = total1.toFixed(0);
+                                document.getElementById("result18").innerHTML = total2.toFixed(1);
+                                document.getElementById("result19").innerHTML = total3.toFixed(1);
+                                document.getElementById("result20").innerHTML = total4.toFixed(1);
+                            }
+                            if (lunch2.checked == true && snack1.checked == true)
+                            {
+                                var total1 = totalcal5 + cal1f;
+                                var total2 = totalcarb5 + carb1f;
+                                var total3 = totalfat5 + fat1f;
+                                var total4 = totalprotein5 + protein1f;
+                                document.getElementById("result17").innerHTML = total1.toFixed(0);
+                                document.getElementById("result18").innerHTML = total2.toFixed(1);
+                                document.getElementById("result19").innerHTML = total3.toFixed(1);
+                                document.getElementById("result20").innerHTML = total4.toFixed(1);
+                            }
+                            if (lunch2.checked == true && snack2.checked == true)
+                            {
+                                var total1 = totalcal5 + cal1g;
+                                var total2 = totalcarb5 + carb1g;
+                                var total3 = totalfat5 + fat1g;
+                                var total4 = totalprotein5 + protein1g;
+                                document.getElementById("result17").innerHTML = total1.toFixed(0);
+                                document.getElementById("result18").innerHTML = total2.toFixed(1);
+                                document.getElementById("result19").innerHTML = total3.toFixed(1);
+                                document.getElementById("result20").innerHTML = total4.toFixed(1);
+                            }
+                            if (lunch2.checked == true && snack3.checked == true)
+                            {
+                                var total1 = totalcal5 + cal1h;
+                                var total2 = totalcarb5 + carb1h;
+                                var total3 = totalfat5 + fat1h;
+                                var total4 = totalprotein5 + protein1h;
+                                document.getElementById("result17").innerHTML = total1.toFixed(0);
+                                document.getElementById("result18").innerHTML = total2.toFixed(1);
+                                document.getElementById("result19").innerHTML = total3.toFixed(1);
+                                document.getElementById("result20").innerHTML = total4.toFixed(1);
+                            }
+                            if (lunch3.checked == true && snack1.checked == true)
+                            {
+                                var total1 = totalcal6 + cal1f;
+                                var total2 = totalcarb6 + carb1f;
+                                var total3 = totalfat6 + fat1f;
+                                var total4 = totalprotein6 + protein1f;
+                                document.getElementById("result17").innerHTML = total1.toFixed(0);
+                                document.getElementById("result18").innerHTML = total2.toFixed(1);
+                                document.getElementById("result19").innerHTML = total3.toFixed(1);
+                                document.getElementById("result20").innerHTML = total4.toFixed(1);
+                            }
+                            if (lunch3.checked == true && snack2.checked == true)
+                            {
+                                var total1 = totalcal6 + cal1g;
+                                var total2 = totalcarb6 + carb1g;
+                                var total3 = totalfat6 + fat1g;
+                                var total4 = totalprotein6 + protein1g;
+                                document.getElementById("result17").innerHTML = total1.toFixed(0);
+                                document.getElementById("result18").innerHTML = total2.toFixed(1);
+                                document.getElementById("result19").innerHTML = total3.toFixed(1);
+                                document.getElementById("result20").innerHTML = total4.toFixed(1);
+                            }
+                            if (lunch3.checked == true && snack3.checked == true)
+                            {
+                                var total1 = totalcal6 + cal1h;
+                                var total2 = totalcarb6 + carb1h;
+                                var total3 = totalfat6 + fat1h;
+                                var total4 = totalprotein6 + protein1h;
+                                document.getElementById("result17").innerHTML = total1.toFixed(0);
+                                document.getElementById("result18").innerHTML = total2.toFixed(1);
+                                document.getElementById("result19").innerHTML = total3.toFixed(1);
+                                document.getElementById("result20").innerHTML = total4.toFixed(1);
+                            }
+                            
+                
+                
+ 
+ 
+ 
+ 
+ 
+                
+                
+                var dinner1 = document.getElementById("inputDinner1");
+                var spaghetti1 = 120; var spaghetti2 = 135; var spaghetti3 = 150; var spaghetti4 = 20; var spaghetti5 = 40; var spaghetti6 = 150; var spaghetti7 = 33; var spaghetti8 = 2.5; var spaghetti9 = 15; var spaghetti10 = 15;
+                var cal1i = 416.4; var cal2i = 32; var cal3i = 298; var cal4i = 8; var cal5i = 10; var cal6i = 45; var cal7i = 7.67; var cal8i = 3.73; var cal9i = 3.75; var cal10i = 132.6;
+                var carb1i = 87.6; var carb2i = 5.1; var carb3i = 8.7; var carb4i = 1.8; var carb5i = 1.48; var carb6i = 6; var carb7i = 1.63; var carb8i = 0.83; var carb9i = 1.26; var carb10i = 0;
+                var fat1i = 3.48; var fat2i = 0.1; var fat3i = 23.3; var fat4i = 0.1; var fat5i = 0.28; var fat6i = 1.5; var fat7i = 0.3; var fat8i = 0; var fat9i = 0.015; var fat10i = 15;
+                var protein1i = 16.8; var protein2i = 1.1; var protein3i = 2.8; var protein4i = 0.4; var protein5i = 1.04; var protein6i = 1.5; var protein7i = 0.8; var protein8i = 0.16; var protein9i = 0.06; var protein10i = 0;
+
+                var dinner2 = document.getElementById("inputDinner2");
+                var dahl1 = 100; var dahl2 = 75; var dahl3 = 145; var dahl4 = 100; var dahl5 = 15; var dahl6 = 400; var dahl7 = 15; var dahl8 = 10; var dahl9 = 20; var dahl10 = 70; var dahl11 = 2.5; var dahl12 = 6;
+                var cal1j = 86; var cal2j = 253.5; var cal3j = 33.25; var cal4j = 362; var cal5j = 3.75; var cal6j = 24; var cal7j = 132.6; var cal8j = 2.3; var cal9j = 8; var cal10j = 28; var cal11j = 3.725; var cal12j = 19.5;
+                var carb1j = 20; var carb2j = 20.33; var carb3j = 8.56; var carb4j = 76; var carb5j = 1.26; var carb6j = 4; var carb7j = 0; var carb8j = 0.37; var carb9j = 1.76; var carb10j = 6.51; var carb11j = 0.825; var carb12j = 3.3;
+                var fat1j = 0.1; var fat2j = 0.75; var fat3j = 0.29; var fat4j = 2.7; var fat5j = 0.015; var fat6j = 0.4; var fat7j = 15; var fat8j = 0.05; var fat9j = 0.08; var fat10j = 0.07; var fat11j = 0.013; var fat12j = 0.8;
+                var protein1j = 1.6; var protein2j = 21; var protein3j = 1.45; var protein4j = 7.5; var protein5j = 0.06; var protein6j = 0.8; var protein7j = 0; var protein8j = 0.21; var protein9j = 0.38; var protein10j = 0.77; var protein11j = 0.16; var protein12j = 0.8;
+                
+                var dinner3 = document.getElementById("inputDinner3"); 
+                var fried1 = 100; var fried2 = 67.5; var fried3 = 125; var fried4 = 100; var fried5 = 61; var fried6 = 50; var fried7 = 20; var fried8 = 20; var fried9 = 30; var fried10 = 15; var fried11 = 30; var fried12 = 2.5; var fried13 = 4; 
+                var cal1k = 362; var cal2k = 16; var cal3k = 27.5; var cal4k = 16; var cal5k = 25; var cal6k = 53; var cal7k = 113.58; var cal8k = 8; var cal9k = 42; var cal10k = 20.1; var cal11k = 265.2; var cal12k = 3.73; var cal13k = 4; 
+                var carb1k = 76; var carb2k = 2.505; var carb3k = 4.125; var carb4k = 3.2; var carb5k = 5.8; var carb6k = 6.5; var carb7k = 3.245; var carb8k = 1.76; var carb9k = 1.8; var carb10k = 0.75; var carb11k = 0; var carb12k = 0.83; var carb13k = 0.6; 
+                var fat1k = 2.7; var fat2k = 0.05; var fat3k = 0.375; var fat4k = 0.2; var fat5k = 0.2; var fat6k = 0.55; var fat7k = 9.876; var fat8k = 0.08; var fat9k = 1.8; var fat10k = 0; var fat11k = 30; var fat12k = 0; var fat13k = 0.032; 
+                var protein1k = 7.5; var protein2k = 0.505; var protein3k = 3.875; var protein4k = 1.2; var protein5k = 0.6; var protein6k = 3.65; var protein7k = 5.15; var protein8k = 0.38; var protein9k = 3.6; var protein10k = 0.075; var protein11k = 0; var protein12k = 0.16; var protein13k = 0.072; 
+
+                var pasta = (dailycalories / 2600) * spaghetti1;
+                var paprika = (dailycalories / 2600) * spaghetti2;
+                var avo = (dailycalories / 2600) * spaghetti3;
+                var peper = (dailycalories / 2600) * spaghetti4;
+                var rucola = (dailycalories / 2600) * spaghetti5;
+                var tomaat = (dailycalories / 2600) * spaghetti6;
+                var caper = (dailycalories / 2600) * spaghetti7;
+                var knoflook = (dailycalories / 2600) * spaghetti8;
+                var limao = (dailycalories / 2600) * spaghetti9;
+                var oleo = (dailycalories / 2600) * spaghetti10;
+
+                var pasta2 = (dailycalories / 2600) * cal1i;
+                var paprika2 = (dailycalories / 2600) * cal2i;
+                var avo2 = (dailycalories / 2600) * cal3i;
+                var peper2 = (dailycalories / 2600) * cal4i;
+                var rucola2 = (dailycalories / 2600) * cal5i;
+                var tomaat2 = (dailycalories / 2600) * cal6i;
+                var caper2 = (dailycalories / 2600) * cal7i;
+                var knoflook2 = (dailycalories / 2600) * cal8i;
+                var limao2 = (dailycalories / 2600) * cal9i;
+                var oleo2 = (dailycalories / 2600) * cal10i;
+
+                var pasta3 = (dailycalories / 2600) * carb1i;
+                var paprika3 = (dailycalories / 2600) * carb2i;
+                var avo3 = (dailycalories / 2600) * carb3i;
+                var peper3 = (dailycalories / 2600) * carb4i;
+                var rucola3 = (dailycalories / 2600) * carb5i;
+                var tomaat3 = (dailycalories / 2600) * carb6i;
+                var caper3 = (dailycalories / 2600) * carb7i;
+                var knoflook3 = (dailycalories / 2600) * carb8i;
+                var limao3 = (dailycalories / 2600) * carb9i;
+                var oleo3 = (dailycalories / 2600) * carb10i;
+
+                var pasta4 = (dailycalories / 2600) * fat1i;
+                var paprika4 = (dailycalories / 2600) * fat2i;
+                var avo4 = (dailycalories / 2600) * fat3i;
+                var peper4 = (dailycalories / 2600) * fat4i;
+                var rucola4 = (dailycalories / 2600) * fat5i;
+                var tomaat4 = (dailycalories / 2600) * fat6i;
+                var caper4 = (dailycalories / 2600) * fat7i;
+                var knoflook4 = (dailycalories / 2600) * fat8i;
+                var limao4 = (dailycalories / 2600) * fat9i;
+                var oleo4 = (dailycalories / 2600) * fat10i;
+
+                var pasta5 = (dailycalories / 2600) * protein1i;
+                var paprika5 = (dailycalories / 2600) * protein2i;
+                var avo5 = (dailycalories / 2600) * protein3i;
+                var peper5 = (dailycalories / 2600) * protein4i;
+                var rucola5 = (dailycalories / 2600) * protein5i;
+                var tomaat5 = (dailycalories / 2600) * protein6i;
+                var caper5 = (dailycalories / 2600) * protein7i;
+                var knoflook5 = (dailycalories / 2600) * protein8i;
+                var limao5 = (dailycalories / 2600) * protein9i;
+                var oleo5 = (dailycalories / 2600) * protein10i;
+
+                var totalcal7 = pasta2 + paprika2 + avo2 + peper2 + rucola2 + tomaat2 + caper2 + knoflook2 + limao2 + oleo2;
+                var totalcarb7 = pasta3 + paprika3 + avo3 + peper3 + rucola3 + tomaat3 + caper3 + knoflook3 + limao3 + oleo3;
+                var totalfat7 = pasta4 + paprika4 + avo4 + peper4 + rucola4 + tomaat4 + caper4 + knoflook4 + limao4 + oleo4;
+                var totalprotein7 = pasta5 + paprika5 + avo5 + peper5 + rucola5 + tomaat5 + caper5 + knoflook5 + limao5 + oleo5;
+                
+                if (dinner1.checked == true)
+                {
+                    document.getElementById("result27").innerHTML = 'Whole grain pasta<br>Paprika<br>Avocado<br>Red pepper<br>Arugula<br>Cherry tomato<br>Capers<br>Garlic<br>Lime juice<br>Olive oil';
+                    document.getElementById("result28").innerHTML = pasta.toFixed(0) + 'g' + '<br>' + paprika.toFixed(0) + 'g' + '<br>' + avo.toFixed(0) + 'g' + '<br>' + peper.toFixed(0) + 'g' + '<br>' + rucola.toFixed(0) + 'g' + '<br>' + tomaat.toFixed(0) + 'g' + '<br>' + caper.toFixed(0) + 'g' + '<br>' + knoflook.toFixed(1) + 'g' + '<br>' + limao.toFixed(0) + 'ml' + '<br>' + oleo.toFixed(0) + 'ml';
+                    document.getElementById("result29").innerHTML = pasta2.toFixed(0) + '<br>' + paprika2.toFixed(0) + '<br>' + avo2.toFixed(0) + '<br>' + peper2.toFixed(0) + '<br>' + rucola2.toFixed(0) + '<br>' + tomaat2.toFixed(0) + '<br>' + caper2.toFixed(0) + '<br>' + knoflook2.toFixed(0) + '<br>' + limao2.toFixed(0) + '<br>' + oleo2.toFixed(0);
+                    document.getElementById("result30").innerHTML = pasta3.toFixed(1) + '<br>' + paprika3.toFixed(1) + '<br>' + avo3.toFixed(1) + '<br>' + peper3.toFixed(1) + '<br>' + rucola3.toFixed(1) + '<br>' + tomaat3.toFixed(1) + '<br>' + caper3.toFixed(1) + '<br>' + knoflook3.toFixed(1) + '<br>' + limao3.toFixed(1) + '<br>' + oleo3.toFixed(1);
+                    document.getElementById("result31").innerHTML = pasta4.toFixed(1) + '<br>' + paprika4.toFixed(1) + '<br>' + avo4.toFixed(1) + '<br>' + peper4.toFixed(1) + '<br>' + rucola4.toFixed(1) + '<br>' + tomaat4.toFixed(1) + '<br>' + caper4.toFixed(1) + '<br>' + knoflook4.toFixed(1) + '<br>' + limao4.toFixed(1) + '<br>' + oleo4.toFixed(1);
+                    document.getElementById("result32").innerHTML = pasta5.toFixed(1) + '<br>' + paprika5.toFixed(1) + '<br>' + avo5.toFixed(1) + '<br>' + peper5.toFixed(1) + '<br>' + rucola5.toFixed(1) + '<br>' + tomaat5.toFixed(1) + '<br>' + caper5.toFixed(1) + '<br>' + knoflook5.toFixed(1) + '<br>' + limao5.toFixed(1) + '<br>' + oleo5.toFixed(1);
+                    
+                    document.getElementById("result33").innerHTML = totalcal7.toFixed(0);
+                    document.getElementById("result34").innerHTML = totalcarb7.toFixed(1);
+                    document.getElementById("result35").innerHTML = totalfat7.toFixed(1);
+                    document.getElementById("result36").innerHTML = totalprotein7.toFixed(1);
+                }
+                
+                var potato = (dailycalories / 2600) * dahl1;
+                var lentil = (dailycalories / 2600) * dahl2;
+                var eggplant = (dailycalories / 2600) * dahl3;
+                var rice = (dailycalories / 2600) * dahl4;
+                var limon = (dailycalories / 2600) * dahl5;
+                var bouillon = (dailycalories / 2600) * dahl6;
+                var oliva = (dailycalories / 2600) * dahl7;
+                var korrie = (dailycalories / 2600) * dahl8;
+                var pimenta = (dailycalories / 2600) * dahl9;
+                var cebolha = (dailycalories / 2600) * dahl10;
+                var knof = (dailycalories / 2600) * dahl11;
+                var kruiden = (dailycalories / 2600) * dahl12;
+                
+                var potato2 = (dailycalories / 2600) * cal1j;
+                var lentil2 = (dailycalories / 2600) * cal2j;
+                var eggplant2 = (dailycalories / 2600) * cal3j;
+                var rice2 = (dailycalories / 2600) * cal4j;
+                var limon2 = (dailycalories / 2600) * cal5j;
+                var bouillon2 = (dailycalories / 2600) * cal6j;
+                var oliva2 = (dailycalories / 2600) * cal7j;
+                var korrie2 = (dailycalories / 2600) * cal8j;
+                var pimenta2 = (dailycalories / 2600) * cal9j;
+                var cebolha2 = (dailycalories / 2600) * cal10j;
+                var knof2 = (dailycalories / 2600) * cal11j;
+                var kruiden2 = (dailycalories / 2600) * cal12j;
+                
+                var potato3 = (dailycalories / 2600) * carb1j;
+                var lentil3 = (dailycalories / 2600) * carb2j;
+                var eggplant3 = (dailycalories / 2600) * carb3j;
+                var rice3 = (dailycalories / 2600) * carb4j;
+                var limon3 = (dailycalories / 2600) * carb5j;
+                var bouillon3 = (dailycalories / 2600) * carb6j;
+                var oliva3 = (dailycalories / 2600) * carb7j;
+                var korrie3 = (dailycalories / 2600) * carb8j;
+                var pimenta3 = (dailycalories / 2600) * carb9j;
+                var cebolha3 = (dailycalories / 2600) * carb10j;
+                var knof3 = (dailycalories / 2600) * carb11j;
+                var kruiden3 = (dailycalories / 2600) * carb12j;
+                
+                var potato4 = (dailycalories / 2600) * fat1j;
+                var lentil4 = (dailycalories / 2600) * fat2j;
+                var eggplant4 = (dailycalories / 2600) * fat3j;
+                var rice4 = (dailycalories / 2600) * fat4j;
+                var limon4 = (dailycalories / 2600) * fat5j;
+                var bouillon4 = (dailycalories / 2600) * fat6j;
+                var oliva4 = (dailycalories / 2600) * fat7j;
+                var korrie4 = (dailycalories / 2600) * fat8j;
+                var pimenta4 = (dailycalories / 2600) * fat9j;
+                var cebolha4 = (dailycalories / 2600) * fat10j;
+                var knof4 = (dailycalories / 2600) * fat11j;
+                var kruiden4 = (dailycalories / 2600) * fat12j;
+                
+                var potato5 = (dailycalories / 2600) * protein1j;
+                var lentil5 = (dailycalories / 2600) * protein2j;
+                var eggplant5 = (dailycalories / 2600) * protein3j;
+                var rice5 = (dailycalories / 2600) * protein4j;
+                var limon5 = (dailycalories / 2600) * protein5j;
+                var bouillon5 = (dailycalories / 2600) * protein6j;
+                var oliva5 = (dailycalories / 2600) * protein7j;
+                var korrie5 = (dailycalories / 2600) * protein8j;
+                var pimenta5 = (dailycalories / 2600) * protein9j;
+                var cebolha5 = (dailycalories / 2600) * protein10j;
+                var knof5 = (dailycalories / 2600) * protein11j;
+                var kruiden5 = (dailycalories / 2600) * protein12j;
+                
+                var totalcal8 = potato2 + lentil2 + eggplant2 + rice2 + limon2 + bouillon2 + oliva2 + korrie2 + pimenta2 + cebolha2 + knof2 + kruiden2;
+                var totalcarb8 = potato3 + lentil3 + eggplant3 + rice3 + limon3 + bouillon3 + oliva3 + korrie3 + pimenta3 + cebolha3 + knof3 + kruiden3;
+                var totalfat8 = potato4 + lentil4 + eggplant4 + rice4 + limon4 + bouillon4 + oliva4 + korrie4 + pimenta4 + cebolha4 + knof4 + kruiden4;
+                var totalprotein8 = potato5 + lentil5 + eggplant5 + rice5 + limon5 + bouillon5 + oliva5 + korrie5 + pimenta5 + cebolha5 + knof5 + kruiden5;
+
+                if (dinner2.checked == true)
+                {
+                    document.getElementById("result27").innerHTML = 'Sweet potato<br>Red lentils<br>Eggplant<br>Whole grain rice<br>Lime juice<br>Vegetable stock<br>Olive oil<br>Coriander<br>Red pepper<br>Onion<br>Garlic<br>Spices';
+                    document.getElementById("result28").innerHTML = potato.toFixed(0) + 'g' + '<br>' + lentil.toFixed(0) + 'g' + '<br>' + eggplant.toFixed(0) + 'g' + '<br>' + rice.toFixed(0) + 'g' + '<br>' + limon.toFixed(0) + 'ml' + '<br>' + bouillon.toFixed(0) + 'ml' + '<br>' + oliva.toFixed(0) + 'ml' + '<br>' + korrie.toFixed(0) + 'g' + '<br>' + pimenta.toFixed(0) + 'g' + '<br>' + cebolha.toFixed(0) + 'g' + '<br>' + knof.toFixed(1) + 'g' + '<br>' + kruiden.toFixed(1) + 'g';
+                    document.getElementById("result29").innerHTML = potato2.toFixed(0) + '<br>' + lentil2.toFixed(0) + '<br>' + eggplant2.toFixed(0) + '<br>' + rice2.toFixed(0) + '<br>' + limon2.toFixed(0) + '<br>' + bouillon2.toFixed(0) + '<br>' + oliva2.toFixed(0) + '<br>' + korrie2.toFixed(0) + '<br>' + pimenta2.toFixed(0) + '<br>' + cebolha2.toFixed(0) + '<br>' + knof2.toFixed(0) + '<br>' + kruiden2.toFixed(0);
+                    document.getElementById("result30").innerHTML = potato3.toFixed(1) + '<br>' + lentil3.toFixed(1) + '<br>' + eggplant3.toFixed(1) + '<br>' + rice3.toFixed(1) + '<br>' + limon3.toFixed(1) + '<br>' + bouillon3.toFixed(1) + '<br>' + oliva3.toFixed(1) + '<br>' + korrie3.toFixed(1) + '<br>' + pimenta3.toFixed(1) + '<br>' + cebolha3.toFixed(1) + '<br>' + knof3.toFixed(1) + '<br>' + kruiden3.toFixed(1);
+                    document.getElementById("result31").innerHTML = potato4.toFixed(1) + '<br>' + lentil4.toFixed(1) + '<br>' + eggplant4.toFixed(1) + '<br>' + rice4.toFixed(1) + '<br>' + limon4.toFixed(1) + '<br>' + bouillon4.toFixed(1) + '<br>' + oliva4.toFixed(1) + '<br>' + korrie4.toFixed(1) + '<br>' + pimenta4.toFixed(1) + '<br>' + cebolha4.toFixed(1) + '<br>' + knof4.toFixed(1) + '<br>' + kruiden4.toFixed(1);
+                    document.getElementById("result32").innerHTML = potato5.toFixed(1) + '<br>' + lentil5.toFixed(1) + '<br>' + eggplant5.toFixed(1) + '<br>' + rice5.toFixed(1) + '<br>' + limon5.toFixed(1) + '<br>' + bouillon5.toFixed(1) + '<br>' + oliva5.toFixed(1) + '<br>' + korrie5.toFixed(1) + '<br>' + pimenta5.toFixed(1) + '<br>' + cebolha5.toFixed(1) + '<br>' + knof5.toFixed(1) + '<br>' + kruiden5.toFixed(1);
+                    
+                    document.getElementById("result33").innerHTML = totalcal8.toFixed(0);
+                    document.getElementById("result34").innerHTML = totalcarb8.toFixed(1);
+                    document.getElementById("result35").innerHTML = totalfat8.toFixed(1);
+                    document.getElementById("result36").innerHTML = totalprotein8.toFixed(1);
+                }
+
+                var rijst = (dailycalories / 2600) * fried1;
+                var pimentao = (dailycalories / 2600) * fried2;
+                var champignon = (dailycalories / 2600) * fried3;
+                var cabbage = (dailycalories / 2600) * fried4;
+                var wortel = (dailycalories / 2600) * fried5;
+                var bonen = (dailycalories / 2600) * fried6;
+                var peanut = (dailycalories / 2600) * fried7;
+                var pittig = (dailycalories / 2600) * fried8;
+                var soya = (dailycalories / 2600) * fried9;
+                var sake = (dailycalories / 2600) * fried10;
+                var oliveoil = (dailycalories / 2600) * fried11;
+                var alho = (dailycalories / 2600) * fried12;
+                var ginger = (dailycalories / 2600) * fried13;
+
+                var rijst2 = (dailycalories / 2600) * cal1k;
+                var pimentao2 = (dailycalories / 2600) * cal2k;
+                var champignon2 = (dailycalories / 2600) * cal3k;
+                var cabbage2 = (dailycalories / 2600) * cal4k;
+                var wortel2 = (dailycalories / 2600) * cal5k;
+                var bonen2 = (dailycalories / 2600) * cal6k;
+                var peanut2 = (dailycalories / 2600) * cal7k;
+                var pittig2 = (dailycalories / 2600) * cal8k;
+                var soya2 = (dailycalories / 2600) * cal9k;
+                var sake2 = (dailycalories / 2600) * cal10k;
+                var oliveoil2 = (dailycalories / 2600) * cal11k;
+                var alho2 = (dailycalories / 2600) * cal12k;
+                var ginger2 = (dailycalories / 2600) * cal13k;
+                
+                var rijst3 = (dailycalories / 2600) * carb1k;
+                var pimentao3 = (dailycalories / 2600) * carb2k;
+                var champignon3 = (dailycalories / 2600) * carb3k;
+                var cabbage3 = (dailycalories / 2600) * carb4k;
+                var wortel3 = (dailycalories / 2600) * carb5k;
+                var bonen3 = (dailycalories / 2600) * carb6k;
+                var peanut3 = (dailycalories / 2600) * carb7k;
+                var pittig3 = (dailycalories / 2600) * carb8k;
+                var soya3 = (dailycalories / 2600) * carb9k;
+                var sake3 = (dailycalories / 2600) * carb10k;
+                var oliveoil3 = (dailycalories / 2600) * carb11k;
+                var alho3 = (dailycalories / 2600) * carb12k;
+                var ginger3 = (dailycalories / 2600) * carb13k;
+
+                var rijst4 = (dailycalories / 2600) * fat1k;
+                var pimentao4 = (dailycalories / 2600) * fat2k;
+                var champignon4 = (dailycalories / 2600) * fat3k;
+                var cabbage4 = (dailycalories / 2600) * fat4k;
+                var wortel4 = (dailycalories / 2600) * fat5k;
+                var bonen4 = (dailycalories / 2600) * fat6k;
+                var peanut4 = (dailycalories / 2600) * fat7k;
+                var pittig4 = (dailycalories / 2600) * fat8k;
+                var soya4 = (dailycalories / 2600) * fat9k;
+                var sake4 = (dailycalories / 2600) * fat10k;
+                var oliveoil4 = (dailycalories / 2600) * fat11k;
+                var alho4 = (dailycalories / 2600) * fat12k;
+                var ginger4 = (dailycalories / 2600) * fat13k;
+
+                var rijst5 = (dailycalories / 2600) * protein1k;
+                var pimentao5 = (dailycalories / 2600) * protein2k;
+                var champignon5 = (dailycalories / 2600) * protein3k;
+                var cabbage5 = (dailycalories / 2600) * protein4k;
+                var wortel5 = (dailycalories / 2600) * protein5k;
+                var bonen5 = (dailycalories / 2600) * protein6k;
+                var peanut5 = (dailycalories / 2600) * protein7k;
+                var pittig5 = (dailycalories / 2600) * protein8k;
+                var soya5 = (dailycalories / 2600) * protein9k;
+                var sake5 = (dailycalories / 2600) * protein10k;
+                var oliveoil5 = (dailycalories / 2600) * protein11k;
+                var alho5 = (dailycalories / 2600) * protein12k;
+                var ginger5 = (dailycalories / 2600) * protein13k;
+
+                var totalcal9 = rijst2 + pimentao2 + champignon2 + cabbage2 + wortel2 + bonen2 + peanut2 + pittig2 + soya2 + sake2 + oliveoil2 + alho2 + ginger2;
+                var totalcarb9 = rijst3 + pimentao3 + champignon3 + cabbage3 + wortel3 + bonen3 + peanut3 + pittig3 + soya3 + sake3 + oliveoil3 + alho3 + ginger3;
+                var totalfat9 = rijst4 + pimentao4 + champignon4 + cabbage4 + wortel4 + bonen4 + peanut4 + pittig4 + soya4 + sake4 + oliveoil4 + alho4 + ginger4;
+                var totalprotein9 = rijst5 + pimentao5 + champignon5 + cabbage5 + wortel5 + bonen5 + peanut5 + pittig5 + soya5 + sake5 + oliveoil5 + alho5 + ginger5;
+
+                if (dinner3.checked == true)
+                {
+                    document.getElementById("result27").innerHTML = 'Whole grain rice<br>Paprika<br>Mushroom<br>Chinese cabbage<br>Carrot<br>Black beans<br>Peanuts<br>Red pepper<br>Soy sauce<br>Sake rice wine<br>Olive oil<br>Garlic<br>Ginger';
+                    document.getElementById("result28").innerHTML = rijst.toFixed(0) + 'g' + '<br>' + pimentao.toFixed(0) + 'g' + '<br>' + champignon.toFixed(0) + 'g' + '<br>' + cabbage.toFixed(0) + 'g' + '<br>' + wortel.toFixed(0) + 'g' + '<br>' + bonen.toFixed(0) + 'g' + '<br>' + peanut.toFixed(0) + 'g' + '<br>' + pittig.toFixed(0) + 'g' + '<br>' + soya.toFixed(0) + 'ml' + '<br>' + sake.toFixed(0) + 'ml' + '<br>' + oliveoil.toFixed(0) + 'ml' + '<br>' + alho.toFixed(1) + 'g' + '<br>' + ginger.toFixed(1) + 'g';
+                    document.getElementById("result29").innerHTML = rijst2.toFixed(0) + '<br>' + pimentao2.toFixed(0) + '<br>' + champignon2.toFixed(0) + '<br>' + cabbage2.toFixed(0) + '<br>' + wortel2.toFixed(0) + '<br>' + bonen2.toFixed(0) + '<br>' + peanut2.toFixed(0) + '<br>' + pittig2.toFixed(0) + '<br>' + soya2.toFixed(0) + '<br>' + sake2.toFixed(0) + '<br>' + oliveoil2.toFixed(0) + '<br>' + alho2.toFixed(0) + '<br>' + ginger2.toFixed(0);
+                    document.getElementById("result30").innerHTML = rijst3.toFixed(1) + '<br>' + pimentao3.toFixed(1) + '<br>' + champignon3.toFixed(1) + '<br>' + cabbage3.toFixed(1) + '<br>' + wortel3.toFixed(1) + '<br>' + bonen3.toFixed(1) + '<br>' + peanut3.toFixed(1) + '<br>' + pittig3.toFixed(1) + '<br>' + soya3.toFixed(1) + '<br>' + sake3.toFixed(1) + '<br>' + oliveoil3.toFixed(1) + '<br>' + alho3.toFixed(1) + '<br>' + ginger3.toFixed(1);
+                    document.getElementById("result31").innerHTML = rijst4.toFixed(1) + '<br>' + pimentao4.toFixed(1) + '<br>' + champignon4.toFixed(1) + '<br>' + cabbage4.toFixed(1) + '<br>' + wortel4.toFixed(1) + '<br>' + bonen4.toFixed(1) + '<br>' + peanut4.toFixed(1) + '<br>' + pittig4.toFixed(1) + '<br>' + soya4.toFixed(1) + '<br>' + sake4.toFixed(1) + '<br>' + oliveoil4.toFixed(1) + '<br>' + alho4.toFixed(1) + '<br>' + ginger4.toFixed(1);
+                    document.getElementById("result32").innerHTML = rijst5.toFixed(1) + '<br>' + pimentao5.toFixed(1) + '<br>' + champignon5.toFixed(1) + '<br>' + cabbage5.toFixed(1) + '<br>' + wortel5.toFixed(1) + '<br>' + bonen5.toFixed(1) + '<br>' + peanut5.toFixed(1) + '<br>' + pittig5.toFixed(1) + '<br>' + soya5.toFixed(1) + '<br>' + sake5.toFixed(1) + '<br>' + oliveoil5.toFixed(1) + '<br>' + alho5.toFixed(1) + '<br>' + ginger5.toFixed(1);
+                    
+                    document.getElementById("result33").innerHTML = totalcal9.toFixed(0);
+                    document.getElementById("result34").innerHTML = totalcarb9.toFixed(1);
+                    document.getElementById("result35").innerHTML = totalfat9.toFixed(1);
+                    document.getElementById("result36").innerHTML = totalprotein9.toFixed(1);
+                }
+                
+                
+                
+                            //all possible options with breakfast1
+                            if (breakfast1.checked == true && lunch1.checked == true && snack1.checked == true && dinner1.checked == true)
+                            {
+                                var total1 = totalcal + totalcal4 + cal1f + totalcal7;
+                                var total2 = totalcarb + totalcarb4 + carb1f + totalcarb7;
+                                var total3 = totalfat + totalfat4 + fat1f + totalfat7;
+                                var total4 = totalprotein + totalprotein4 + protein1f + totalprotein7;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            if (breakfast1.checked == true && lunch1.checked == true && snack1.checked == true && dinner2.checked == true)
+                            {
+                                var total1 = totalcal + totalcal4 + cal1f + totalcal8;
+                                var total2 = totalcarb + totalcarb4 + carb1f + totalcarb8;
+                                var total3 = totalfat + totalfat4 + fat1f + totalfat8;
+                                var total4 = totalprotein + totalprotein4 + protein1f + totalprotein8;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            if (breakfast1.checked == true && lunch1.checked == true && snack1.checked == true && dinner3.checked == true)
+                            {
+                                var total1 = totalcal + totalcal4 + cal1f + totalcal9;
+                                var total2 = totalcarb + totalcarb4 + carb1f + totalcarb9;
+                                var total3 = totalfat + totalfat4 + fat1f + totalfat9;
+                                var total4 = totalprotein + totalprotein4 + protein1f + totalprotein9;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            
+                            
+                            if (breakfast1.checked == true && lunch1.checked == true && snack2.checked == true && dinner1.checked == true)
+                            {
+                                var total1 = totalcal + totalcal4 + cal1g + totalcal7;
+                                var total2 = totalcarb + totalcarb4 + carb1g + totalcarb7;
+                                var total3 = totalfat + totalfat4 + fat1g + totalfat7;
+                                var total4 = totalprotein + totalprotein4 + protein1g + totalprotein7;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            if (breakfast1.checked == true && lunch1.checked == true && snack2.checked == true && dinner2.checked == true)
+                            {
+                                var total1 = totalcal + totalcal4 + cal1g + totalcal8;
+                                var total2 = totalcarb + totalcarb4 + carb1g + totalcarb8;
+                                var total3 = totalfat + totalfat4 + fat1g + totalfat8;
+                                var total4 = totalprotein + totalprotein4 + protein1g + totalprotein8;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            if (breakfast1.checked == true && lunch1.checked == true && snack2.checked == true && dinner3.checked == true)
+                            {
+                                var total1 = totalcal + totalcal4 + cal1g + totalcal9;
+                                var total2 = totalcarb + totalcarb4 + carb1g + totalcarb9;
+                                var total3 = totalfat + totalfat4 + fat1g + totalfat9;
+                                var total4 = totalprotein + totalprotein4 + protein1g + totalprotein9;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            
+                            
+                            if (breakfast1.checked == true && lunch1.checked == true && snack3.checked == true && dinner1.checked == true)
+                            {
+                                var total1 = totalcal + totalcal4 + cal1h + totalcal7;
+                                var total2 = totalcarb + totalcarb4 + carb1h + totalcarb7;
+                                var total3 = totalfat + totalfat4 + fat1h + totalfat7;
+                                var total4 = totalprotein + totalprotein4 + protein1h + totalprotein7;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            if (breakfast1.checked == true && lunch1.checked == true && snack3.checked == true && dinner2.checked == true)
+                            {
+                                var total1 = totalcal + totalcal4 + cal1h + totalcal8;
+                                var total2 = totalcarb + totalcarb4 + carb1h + totalcarb8;
+                                var total3 = totalfat + totalfat4 + fat1h + totalfat8;
+                                var total4 = totalprotein + totalprotein4 + protein1h + totalprotein8;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            if (breakfast1.checked == true && lunch1.checked == true && snack3.checked == true && dinner3.checked == true)
+                            {
+                                var total1 = totalcal + totalcal4 + cal1h + totalcal9;
+                                var total2 = totalcarb + totalcarb4 + carb1h + totalcarb9;
+                                var total3 = totalfat + totalfat4 + fat1h + totalfat9;
+                                var total4 = totalprotein + totalprotein4 + protein1h + totalprotein9;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            
+                            
+                            if (breakfast1.checked == true && lunch2.checked == true && snack1.checked == true && dinner1.checked == true)
+                            {
+                                var total1 = totalcal + totalcal5 + cal1f + totalcal7;
+                                var total2 = totalcarb + totalcarb5 + carb1f + totalcarb7;
+                                var total3 = totalfat + totalfat5 + fat1f + totalfat7;
+                                var total4 = totalprotein + totalprotein5 + protein1f + totalprotein7;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            if (breakfast1.checked == true && lunch2.checked == true && snack1.checked == true && dinner2.checked == true)
+                            {
+                                var total1 = totalcal + totalcal5 + cal1f + totalcal8;
+                                var total2 = totalcarb + totalcarb5 + carb1f + totalcarb8;
+                                var total3 = totalfat + totalfat5 + fat1f + totalfat8;
+                                var total4 = totalprotein + totalprotein5 + protein1f + totalprotein8;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            if (breakfast1.checked == true && lunch2.checked == true && snack1.checked == true && dinner3.checked == true)
+                            {
+                                var total1 = totalcal + totalcal5 + cal1f + totalcal9;
+                                var total2 = totalcarb + totalcarb5 + carb1f + totalcarb9;
+                                var total3 = totalfat + totalfat5 + fat1f + totalfat9;
+                                var total4 = totalprotein + totalprotein5 + protein1f + totalprotein9;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            
+                            
+                            if (breakfast1.checked == true && lunch2.checked == true && snack2.checked == true && dinner1.checked == true)
+                            {
+                                var total1 = totalcal + totalcal5 + cal1g + totalcal7;
+                                var total2 = totalcarb + totalcarb5 + carb1g + totalcarb7;
+                                var total3 = totalfat + totalfat5 + fat1g + totalfat7;
+                                var total4 = totalprotein + totalprotein5 + protein1g + totalprotein7;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            if (breakfast1.checked == true && lunch2.checked == true && snack2.checked == true && dinner2.checked == true)
+                            {
+                                var total1 = totalcal + totalcal5 + cal1g + totalcal8;
+                                var total2 = totalcarb + totalcarb5 + carb1g + totalcarb8;
+                                var total3 = totalfat + totalfat5 + fat1g + totalfat8;
+                                var total4 = totalprotein + totalprotein5 + protein1g + totalprotein8;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            if (breakfast1.checked == true && lunch2.checked == true && snack2.checked == true && dinner3.checked == true)
+                            {
+                                var total1 = totalcal + totalcal5 + cal1g + totalcal9;
+                                var total2 = totalcarb + totalcarb5 + carb1g + totalcarb9;
+                                var total3 = totalfat + totalfat5 + fat1g + totalfat9;
+                                var total4 = totalprotein + totalprotein5 + protein1g + totalprotein9;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            
+                            
+                            if (breakfast1.checked == true && lunch2.checked == true && snack3.checked == true && dinner1.checked == true)
+                            {
+                                var total1 = totalcal + totalcal5 + cal1h + totalcal7;
+                                var total2 = totalcarb + totalcarb5 + carb1h + totalcarb7;
+                                var total3 = totalfat + totalfat5 + fat1h + totalfat7;
+                                var total4 = totalprotein + totalprotein5 + protein1h + totalprotein7;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            if (breakfast1.checked == true && lunch2.checked == true && snack3.checked == true && dinner2.checked == true)
+                            {
+                                var total1 = totalcal + totalcal5 + cal1h + totalcal8;
+                                var total2 = totalcarb + totalcarb5 + carb1h + totalcarb8;
+                                var total3 = totalfat + totalfat5 + fat1h + totalfat8;
+                                var total4 = totalprotein + totalprotein5 + protein1h + totalprotein8;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            if (breakfast1.checked == true && lunch2.checked == true && snack3.checked == true && dinner3.checked == true)
+                            {
+                                var total1 = totalcal + totalcal5 + cal1h + totalcal9;
+                                var total2 = totalcarb + totalcarb5 + carb1h + totalcarb9;
+                                var total3 = totalfat + totalfat5 + fat1h + totalfat9;
+                                var total4 = totalprotein + totalprotein5 + protein1h + totalprotein9;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            
+                            
+                            if (breakfast1.checked == true && lunch3.checked == true && snack1.checked == true && dinner1.checked == true)
+                            {
+                                var total1 = totalcal + totalcal6 + cal1f + totalcal7;
+                                var total2 = totalcarb + totalcarb6 + carb1f + totalcarb7;
+                                var total3 = totalfat + totalfat6 + fat1f + totalfat7;
+                                var total4 = totalprotein + totalprotein6 + protein1f + totalprotein7;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            if (breakfast1.checked == true && lunch3.checked == true && snack1.checked == true && dinner2.checked == true)
+                            {
+                                var total1 = totalcal + totalcal6 + cal1f + totalcal8;
+                                var total2 = totalcarb + totalcarb6 + carb1f + totalcarb8;
+                                var total3 = totalfat + totalfat6 + fat1f + totalfat8;
+                                var total4 = totalprotein + totalprotein6 + protein1f + totalprotein8;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            if (breakfast1.checked == true && lunch3.checked == true && snack1.checked == true && dinner3.checked == true)
+                            {
+                                var total1 = totalcal + totalcal6 + cal1f + totalcal9;
+                                var total2 = totalcarb + totalcarb6 + carb1f + totalcarb9;
+                                var total3 = totalfat + totalfat6 + fat1f + totalfat9;
+                                var total4 = totalprotein + totalprotein6 + protein1f + totalprotein9;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            
+                            
+                            if (breakfast1.checked == true && lunch3.checked == true && snack2.checked == true && dinner1.checked == true)
+                            {
+                                var total1 = totalcal + totalcal6 + cal1g + totalcal7;
+                                var total2 = totalcarb + totalcarb6 + carb1g + totalcarb7;
+                                var total3 = totalfat + totalfat6 + fat1g + totalfat7;
+                                var total4 = totalprotein + totalprotein6 + protein1g + totalprotein7;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            if (breakfast1.checked == true && lunch3.checked == true && snack2.checked == true && dinner2.checked == true)
+                            {
+                                var total1 = totalcal + totalcal6 + cal1g + totalcal8;
+                                var total2 = totalcarb + totalcarb6 + carb1g + totalcarb8;
+                                var total3 = totalfat + totalfat6 + fat1g + totalfat8;
+                                var total4 = totalprotein + totalprotein6 + protein1g + totalprotein8;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            if (breakfast1.checked == true && lunch3.checked == true && snack2.checked == true && dinner3.checked == true)
+                            {
+                                var total1 = totalcal + totalcal6 + cal1g + totalcal9;
+                                var total2 = totalcarb + totalcarb6 + carb1g + totalcarb9;
+                                var total3 = totalfat + totalfat6 + fat1g + totalfat9;
+                                var total4 = totalprotein + totalprotein6 + protein1g + totalprotein9;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            
+                            
+                            if (breakfast1.checked == true && lunch3.checked == true && snack3.checked == true && dinner1.checked == true)
+                            {
+                                var total1 = totalcal + totalcal6 + cal1h + totalcal7;
+                                var total2 = totalcarb + totalcarb6 + carb1h + totalcarb7;
+                                var total3 = totalfat + totalfat6 + fat1h + totalfat7;
+                                var total4 = totalprotein + totalprotein6 + protein1h + totalprotein7;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            if (breakfast1.checked == true && lunch3.checked == true && snack3.checked == true && dinner2.checked == true)
+                            {
+                                var total1 = totalcal + totalcal6 + cal1h + totalcal8;
+                                var total2 = totalcarb + totalcarb6 + carb1h + totalcarb8;
+                                var total3 = totalfat + totalfat6 + fat1h + totalfat8;
+                                var total4 = totalprotein + totalprotein6 + protein1h + totalprotein8;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            if (breakfast1.checked == true && lunch3.checked == true && snack3.checked == true && dinner3.checked == true)
+                            {
+                                var total1 = totalcal + totalcal6 + cal1h + totalcal9;
+                                var total2 = totalcarb + totalcarb6 + carb1h + totalcarb9;
+                                var total3 = totalfat + totalfat6 + fat1h + totalfat9;
+                                var total4 = totalprotein + totalprotein6 + protein1h + totalprotein9;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            //all possible options with breakfast2
+                            if (breakfast2.checked == true && lunch1.checked == true && snack1.checked == true && dinner1.checked == true)
+                            {
+                                var total1 = totalcal2 + totalcal4 + cal1f + totalcal7;
+                                var total2 = totalcarb2 + totalcarb4 + carb1f + totalcarb7;
+                                var total3 = totalfat2 + totalfat4 + fat1f + totalfat7;
+                                var total4 = totalprotein2 + totalprotein4 + protein1f + totalprotein7;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            if (breakfast2.checked == true && lunch1.checked == true && snack1.checked == true && dinner2.checked == true)
+                            {
+                                var total1 = totalcal2 + totalcal4 + cal1f + totalcal8;
+                                var total2 = totalcarb2 + totalcarb4 + carb1f + totalcarb8;
+                                var total3 = totalfat2 + totalfat4 + fat1f + totalfat8;
+                                var total4 = totalprotein2 + totalprotein4 + protein1f + totalprotein8;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            if (breakfast2.checked == true && lunch1.checked == true && snack1.checked == true && dinner3.checked == true)
+                            {
+                                var total1 = totalcal2 + totalcal4 + cal1f + totalcal9;
+                                var total2 = totalcarb2 + totalcarb4 + carb1f + totalcarb9;
+                                var total3 = totalfat2 + totalfat4 + fat1f + totalfat9;
+                                var total4 = totalprotein2 + totalprotein4 + protein1f + totalprotein9;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            
+                            
+                            if (breakfast2.checked == true && lunch1.checked == true && snack2.checked == true && dinner1.checked == true)
+                            {
+                                var total1 = totalcal2 + totalcal4 + cal1g + totalcal7;
+                                var total2 = totalcarb2 + totalcarb4 + carb1g + totalcarb7;
+                                var total3 = totalfat2 + totalfat4 + fat1g + totalfat7;
+                                var total4 = totalprotein2 + totalprotein4 + protein1g + totalprotein7;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            if (breakfast2.checked == true && lunch1.checked == true && snack2.checked == true && dinner2.checked == true)
+                            {
+                                var total1 = totalcal2 + totalcal4 + cal1g + totalcal8;
+                                var total2 = totalcarb2 + totalcarb4 + carb1g + totalcarb8;
+                                var total3 = totalfat2 + totalfat4 + fat1g + totalfat8;
+                                var total4 = totalprotein2 + totalprotein4 + protein1g + totalprotein8;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            if (breakfast2.checked == true && lunch1.checked == true && snack2.checked == true && dinner3.checked == true)
+                            {
+                                var total1 = totalcal2 + totalcal4 + cal1g + totalcal9;
+                                var total2 = totalcarb2 + totalcarb4 + carb1g + totalcarb9;
+                                var total3 = totalfat2 + totalfat4 + fat1g + totalfat9;
+                                var total4 = totalprotein2 + totalprotein4 + protein1g + totalprotein9;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            
+                            
+                            if (breakfast2.checked == true && lunch1.checked == true && snack3.checked == true && dinner1.checked == true)
+                            {
+                                var total1 = totalcal2 + totalcal4 + cal1h + totalcal7;
+                                var total2 = totalcarb2 + totalcarb4 + carb1h + totalcarb7;
+                                var total3 = totalfat2 + totalfat4 + fat1h + totalfat7;
+                                var total4 = totalprotein2 + totalprotein4 + protein1h + totalprotein7;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            if (breakfast2.checked == true && lunch1.checked == true && snack3.checked == true && dinner2.checked == true)
+                            {
+                                var total1 = totalcal2 + totalcal4 + cal1h + totalcal8;
+                                var total2 = totalcarb2 + totalcarb4 + carb1h + totalcarb8;
+                                var total3 = totalfat2 + totalfat4 + fat1h + totalfat8;
+                                var total4 = totalprotein2 + totalprotein4 + protein1h + totalprotein8;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            if (breakfast2.checked == true && lunch1.checked == true && snack3.checked == true && dinner3.checked == true)
+                            {
+                                var total1 = totalcal2 + totalcal4 + cal1h + totalcal9;
+                                var total2 = totalcarb2 + totalcarb4 + carb1h + totalcarb9;
+                                var total3 = totalfat2 + totalfat4 + fat1h + totalfat9;
+                                var total4 = totalprotein2 + totalprotein4 + protein1h + totalprotein9;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            
+                            
+                            if (breakfast2.checked == true && lunch2.checked == true && snack1.checked == true && dinner1.checked == true)
+                            {
+                                var total1 = totalcal2 + totalcal5 + cal1f + totalcal7;
+                                var total2 = totalcarb2 + totalcarb5 + carb1f + totalcarb7;
+                                var total3 = totalfat2 + totalfat5 + fat1f + totalfat7;
+                                var total4 = totalprotein2 + totalprotein5 + protein1f + totalprotein7;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            if (breakfast2.checked == true && lunch2.checked == true && snack1.checked == true && dinner2.checked == true)
+                            {
+                                var total1 = totalcal2 + totalcal5 + cal1f + totalcal8;
+                                var total2 = totalcarb2 + totalcarb5 + carb1f + totalcarb8;
+                                var total3 = totalfat2 + totalfat5 + fat1f + totalfat8;
+                                var total4 = totalprotein2 + totalprotein5 + protein1f + totalprotein8;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            if (breakfast2.checked == true && lunch2.checked == true && snack1.checked == true && dinner3.checked == true)
+                            {
+                                var total1 = totalcal2 + totalcal5 + cal1f + totalcal9;
+                                var total2 = totalcarb2 + totalcarb5 + carb1f + totalcarb9;
+                                var total3 = totalfat2 + totalfat5 + fat1f + totalfat9;
+                                var total4 = totalprotein2 + totalprotein5 + protein1f + totalprotein9;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            
+                            
+                            if (breakfast2.checked == true && lunch2.checked == true && snack2.checked == true && dinner1.checked == true)
+                            {
+                                var total1 = totalcal2 + totalcal5 + cal1g + totalcal7;
+                                var total2 = totalcarb2 + totalcarb5 + carb1g + totalcarb7;
+                                var total3 = totalfat2 + totalfat5 + fat1g + totalfat7;
+                                var total4 = totalprotein2 + totalprotein5 + protein1g + totalprotein7;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            if (breakfast2.checked == true && lunch2.checked == true && snack2.checked == true && dinner2.checked == true)
+                            {
+                                var total1 = totalcal2 + totalcal5 + cal1g + totalcal8;
+                                var total2 = totalcarb2 + totalcarb5 + carb1g + totalcarb8;
+                                var total3 = totalfat2 + totalfat5 + fat1g + totalfat8;
+                                var total4 = totalprotein2 + totalprotein5 + protein1g + totalprotein8;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            if (breakfast2.checked == true && lunch2.checked == true && snack2.checked == true && dinner3.checked == true)
+                            {
+                                var total1 = totalcal2 + totalcal5 + cal1g + totalcal9;
+                                var total2 = totalcarb2 + totalcarb5 + carb1g + totalcarb9;
+                                var total3 = totalfat2 + totalfat5 + fat1g + totalfat9;
+                                var total4 = totalprotein2 + totalprotein5 + protein1g + totalprotein9;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            
+                            
+                            if (breakfast2.checked == true && lunch2.checked == true && snack3.checked == true && dinner1.checked == true)
+                            {
+                                var total1 = totalcal2 + totalcal5 + cal1h + totalcal7;
+                                var total2 = totalcarb2 + totalcarb5 + carb1h + totalcarb7;
+                                var total3 = totalfat2 + totalfat5 + fat1h + totalfat7;
+                                var total4 = totalprotein2 + totalprotein5 + protein1h + totalprotein7;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            if (breakfast2.checked == true && lunch2.checked == true && snack3.checked == true && dinner2.checked == true)
+                            {
+                                var total1 = totalcal2 + totalcal5 + cal1h + totalcal8;
+                                var total2 = totalcarb2 + totalcarb5 + carb1h + totalcarb8;
+                                var total3 = totalfat2 + totalfat5 + fat1h + totalfat8;
+                                var total4 = totalprotein2 + totalprotein5 + protein1h + totalprotein8;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            if (breakfast2.checked == true && lunch2.checked == true && snack3.checked == true && dinner3.checked == true)
+                            {
+                                var total1 = totalcal2 + totalcal5 + cal1h + totalcal9;
+                                var total2 = totalcarb2 + totalcarb5 + carb1h + totalcarb9;
+                                var total3 = totalfat2 + totalfat5 + fat1h + totalfat9;
+                                var total4 = totalprotein2 + totalprotein5 + protein1h + totalprotein9;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            
+                            
+                            if (breakfast2.checked == true && lunch3.checked == true && snack1.checked == true && dinner1.checked == true)
+                            {
+                                var total1 = totalcal2 + totalcal6 + cal1f + totalcal7;
+                                var total2 = totalcarb2 + totalcarb6 + carb1f + totalcarb7;
+                                var total3 = totalfat2 + totalfat6 + fat1f + totalfat7;
+                                var total4 = totalprotein2 + totalprotein6 + protein1f + totalprotein7;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            if (breakfast2.checked == true && lunch3.checked == true && snack1.checked == true && dinner2.checked == true)
+                            {
+                                var total1 = totalcal2 + totalcal6 + cal1f + totalcal8;
+                                var total2 = totalcarb2 + totalcarb6 + carb1f + totalcarb8;
+                                var total3 = totalfat2 + totalfat6 + fat1f + totalfat8;
+                                var total4 = totalprotein2 + totalprotein6 + protein1f + totalprotein8;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            if (breakfast2.checked == true && lunch3.checked == true && snack1.checked == true && dinner3.checked == true)
+                            {
+                                var total1 = totalcal2 + totalcal6 + cal1f + totalcal9;
+                                var total2 = totalcarb2 + totalcarb6 + carb1f + totalcarb9;
+                                var total3 = totalfat2 + totalfat6 + fat1f + totalfat9;
+                                var total4 = totalprotein2 + totalprotein6 + protein1f + totalprotein9;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            
+                            
+                            if (breakfast2.checked == true && lunch3.checked == true && snack2.checked == true && dinner1.checked == true)
+                            {
+                                var total1 = totalcal2 + totalcal6 + cal1g + totalcal7;
+                                var total2 = totalcarb2 + totalcarb6 + carb1g + totalcarb7;
+                                var total3 = totalfat2 + totalfat6 + fat1g + totalfat7;
+                                var total4 = totalprotein2 + totalprotein6 + protein1g + totalprotein7;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            if (breakfast2.checked == true && lunch3.checked == true && snack2.checked == true && dinner2.checked == true)
+                            {
+                                var total1 = totalcal2 + totalcal6 + cal1g + totalcal8;
+                                var total2 = totalcarb2 + totalcarb6 + carb1g + totalcarb8;
+                                var total3 = totalfat2 + totalfat6 + fat1g + totalfat8;
+                                var total4 = totalprotein2 + totalprotein6 + protein1g + totalprotein8;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            if (breakfast2.checked == true && lunch3.checked == true && snack2.checked == true && dinner3.checked == true)
+                            {
+                                var total1 = totalcal2 + totalcal6 + cal1g + totalcal9;
+                                var total2 = totalcarb2 + totalcarb6 + carb1g + totalcarb9;
+                                var total3 = totalfat2 + totalfat6 + fat1g + totalfat9;
+                                var total4 = totalprotein2 + totalprotein6 + protein1g + totalprotein9;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            
+                            
+                            if (breakfast2.checked == true && lunch3.checked == true && snack3.checked == true && dinner1.checked == true)
+                            {
+                                var total1 = totalcal2 + totalcal6 + cal1h + totalcal7;
+                                var total2 = totalcarb2 + totalcarb6 + carb1h + totalcarb7;
+                                var total3 = totalfat2 + totalfat6 + fat1h + totalfat7;
+                                var total4 = totalprotein2 + totalprotein6 + protein1h + totalprotein7;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            if (breakfast2.checked == true && lunch3.checked == true && snack3.checked == true && dinner2.checked == true)
+                            {
+                                var total1 = totalcal2 + totalcal6 + cal1h + totalcal8;
+                                var total2 = totalcarb2 + totalcarb6 + carb1h + totalcarb8;
+                                var total3 = totalfat2 + totalfat6 + fat1h + totalfat8;
+                                var total4 = totalprotein2 + totalprotein6 + protein1h + totalprotein8;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            if (breakfast2.checked == true && lunch3.checked == true && snack3.checked == true && dinner3.checked == true)
+                            {
+                                var total1 = totalcal2 + totalcal6 + cal1h + totalcal9;
+                                var total2 = totalcarb2 + totalcarb6 + carb1h + totalcarb9;
+                                var total3 = totalfat2 + totalfat6 + fat1h + totalfat9;
+                                var total4 = totalprotein2 + totalprotein6 + protein1h + totalprotein9;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            //all possible options with breakfast3
+                            if (breakfast3.checked == true && lunch1.checked == true && snack1.checked == true && dinner1.checked == true)
+                            {
+                                var total1 = totalcal3 + totalcal4 + cal1f + totalcal7;
+                                var total2 = totalcarb3 + totalcarb4 + carb1f + totalcarb7;
+                                var total3 = totalfat3 + totalfat4 + fat1f + totalfat7;
+                                var total4 = totalprotein3 + totalprotein4 + protein1f + totalprotein7;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            if (breakfast3.checked == true && lunch1.checked == true && snack1.checked == true && dinner2.checked == true)
+                            {
+                                var total1 = totalcal3 + totalcal4 + cal1f + totalcal8;
+                                var total2 = totalcarb3 + totalcarb4 + carb1f + totalcarb8;
+                                var total3 = totalfat3 + totalfat4 + fat1f + totalfat8;
+                                var total4 = totalprotein3 + totalprotein4 + protein1f + totalprotein8;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            if (breakfast3.checked == true && lunch1.checked == true && snack1.checked == true && dinner3.checked == true)
+                            {
+                                var total1 = totalcal3 + totalcal4 + cal1f + totalcal9;
+                                var total2 = totalcarb3 + totalcarb4 + carb1f + totalcarb9;
+                                var total3 = totalfat3 + totalfat4 + fat1f + totalfat9;
+                                var total4 = totalprotein3 + totalprotein4 + protein1f + totalprotein9;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            
+                            
+                            if (breakfast3.checked == true && lunch1.checked == true && snack2.checked == true && dinner1.checked == true)
+                            {
+                                var total1 = totalcal3 + totalcal4 + cal1g + totalcal7;
+                                var total2 = totalcarb3 + totalcarb4 + carb1g + totalcarb7;
+                                var total3 = totalfat3 + totalfat4 + fat1g + totalfat7;
+                                var total4 = totalprotein3 + totalprotein4 + protein1g + totalprotein7;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            if (breakfast3.checked == true && lunch1.checked == true && snack2.checked == true && dinner2.checked == true)
+                            {
+                                var total1 = totalcal3 + totalcal4 + cal1g + totalcal8;
+                                var total2 = totalcarb3 + totalcarb4 + carb1g + totalcarb8;
+                                var total3 = totalfat3 + totalfat4 + fat1g + totalfat8;
+                                var total4 = totalprotein3 + totalprotein4 + protein1g + totalprotein8;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            if (breakfast3.checked == true && lunch1.checked == true && snack2.checked == true && dinner3.checked == true)
+                            {
+                                var total1 = totalcal3 + totalcal4 + cal1g + totalcal9;
+                                var total2 = totalcarb3 + totalcarb4 + carb1g + totalcarb9;
+                                var total3 = totalfat3 + totalfat4 + fat1g + totalfat9;
+                                var total4 = totalprotein3 + totalprotein4 + protein1g + totalprotein9;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            
+                            
+                            if (breakfast3.checked == true && lunch1.checked == true && snack3.checked == true && dinner1.checked == true)
+                            {
+                                var total1 = totalcal3 + totalcal4 + cal1h + totalcal7;
+                                var total2 = totalcarb3 + totalcarb4 + carb1h + totalcarb7;
+                                var total3 = totalfat3 + totalfat4 + fat1h + totalfat7;
+                                var total4 = totalprotein3 + totalprotein4 + protein1h + totalprotein7;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            if (breakfast3.checked == true && lunch1.checked == true && snack3.checked == true && dinner2.checked == true)
+                            {
+                                var total1 = totalcal3 + totalcal4 + cal1h + totalcal8;
+                                var total2 = totalcarb3 + totalcarb4 + carb1h + totalcarb8;
+                                var total3 = totalfat3 + totalfat4 + fat1h + totalfat8;
+                                var total4 = totalprotein3 + totalprotein4 + protein1h + totalprotein8;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            if (breakfast3.checked == true && lunch1.checked == true && snack3.checked == true && dinner3.checked == true)
+                            {
+                                var total1 = totalcal3 + totalcal4 + cal1h + totalcal9;
+                                var total2 = totalcarb3 + totalcarb4 + carb1h + totalcarb9;
+                                var total3 = totalfat3 + totalfat4 + fat1h + totalfat9;
+                                var total4 = totalprotein3 + totalprotein4 + protein1h + totalprotein9;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            
+                            
+                            if (breakfast3.checked == true && lunch2.checked == true && snack1.checked == true && dinner1.checked == true)
+                            {
+                                var total1 = totalcal3 + totalcal5 + cal1f + totalcal7;
+                                var total2 = totalcarb3 + totalcarb5 + carb1f + totalcarb7;
+                                var total3 = totalfat3 + totalfat5 + fat1f + totalfat7;
+                                var total4 = totalprotein3 + totalprotein5 + protein1f + totalprotein7;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            if (breakfast3.checked == true && lunch2.checked == true && snack1.checked == true && dinner2.checked == true)
+                            {
+                                var total1 = totalcal3 + totalcal5 + cal1f + totalcal8;
+                                var total2 = totalcarb3 + totalcarb5 + carb1f + totalcarb8;
+                                var total3 = totalfat3 + totalfat5 + fat1f + totalfat8;
+                                var total4 = totalprotein3 + totalprotein5 + protein1f + totalprotein8;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            if (breakfast3.checked == true && lunch2.checked == true && snack1.checked == true && dinner3.checked == true)
+                            {
+                                var total1 = totalcal3 + totalcal5 + cal1f + totalcal9;
+                                var total2 = totalcarb3 + totalcarb5 + carb1f + totalcarb9;
+                                var total3 = totalfat3 + totalfat5 + fat1f + totalfat9;
+                                var total4 = totalprotein3 + totalprotein5 + protein1f + totalprotein9;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            
+                            
+                            if (breakfast3.checked == true && lunch2.checked == true && snack2.checked == true && dinner1.checked == true)
+                            {
+                                var total1 = totalcal3 + totalcal5 + cal1g + totalcal7;
+                                var total2 = totalcarb3 + totalcarb5 + carb1g + totalcarb7;
+                                var total3 = totalfat3 + totalfat5 + fat1g + totalfat7;
+                                var total4 = totalprotein3 + totalprotein5 + protein1g + totalprotein7;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            if (breakfast3.checked == true && lunch2.checked == true && snack2.checked == true && dinner2.checked == true)
+                            {
+                                var total1 = totalcal3 + totalcal5 + cal1g + totalcal8;
+                                var total2 = totalcarb3 + totalcarb5 + carb1g + totalcarb8;
+                                var total3 = totalfat3 + totalfat5 + fat1g + totalfat8;
+                                var total4 = totalprotein3 + totalprotein5 + protein1g + totalprotein8;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            if (breakfast3.checked == true && lunch2.checked == true && snack2.checked == true && dinner3.checked == true)
+                            {
+                                var total1 = totalcal3 + totalcal5 + cal1g + totalcal9;
+                                var total2 = totalcarb3 + totalcarb5 + carb1g + totalcarb9;
+                                var total3 = totalfat3 + totalfat5 + fat1g + totalfat9;
+                                var total4 = totalprotein3 + totalprotein5 + protein1g + totalprotein9;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            
+                            
+                            if (breakfast3.checked == true && lunch2.checked == true && snack3.checked == true && dinner1.checked == true)
+                            {
+                                var total1 = totalcal3 + totalcal5 + cal1h + totalcal7;
+                                var total2 = totalcarb3 + totalcarb5 + carb1h + totalcarb7;
+                                var total3 = totalfat3 + totalfat5 + fat1h + totalfat7;
+                                var total4 = totalprotein3 + totalprotein5 + protein1h + totalprotein7;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            if (breakfast3.checked == true && lunch2.checked == true && snack3.checked == true && dinner2.checked == true)
+                            {
+                                var total1 = totalcal3 + totalcal5 + cal1h + totalcal8;
+                                var total2 = totalcarb3 + totalcarb5 + carb1h + totalcarb8;
+                                var total3 = totalfat3 + totalfat5 + fat1h + totalfat8;
+                                var total4 = totalprotein3 + totalprotein5 + protein1h + totalprotein8;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            if (breakfast3.checked == true && lunch2.checked == true && snack3.checked == true && dinner3.checked == true)
+                            {
+                                var total1 = totalcal3 + totalcal5 + cal1h + totalcal9;
+                                var total2 = totalcarb3 + totalcarb5 + carb1h + totalcarb9;
+                                var total3 = totalfat3 + totalfat5 + fat1h + totalfat9;
+                                var total4 = totalprotein3 + totalprotein5 + protein1h + totalprotein9;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            
+                            
+                            if (breakfast3.checked == true && lunch3.checked == true && snack1.checked == true && dinner1.checked == true)
+                            {
+                                var total1 = totalcal3 + totalcal6 + cal1f + totalcal7;
+                                var total2 = totalcarb3 + totalcarb6 + carb1f + totalcarb7;
+                                var total3 = totalfat3 + totalfat6 + fat1f + totalfat7;
+                                var total4 = totalprotein3 + totalprotein6 + protein1f + totalprotein7;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            if (breakfast3.checked == true && lunch3.checked == true && snack1.checked == true && dinner2.checked == true)
+                            {
+                                var total1 = totalcal3 + totalcal6 + cal1f + totalcal8;
+                                var total2 = totalcarb3 + totalcarb6 + carb1f + totalcarb8;
+                                var total3 = totalfat3 + totalfat6 + fat1f + totalfat8;
+                                var total4 = totalprotein3 + totalprotein6 + protein1f + totalprotein8;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            if (breakfast3.checked == true && lunch3.checked == true && snack1.checked == true && dinner3.checked == true)
+                            {
+                                var total1 = totalcal3 + totalcal6 + cal1f + totalcal9;
+                                var total2 = totalcarb3 + totalcarb6 + carb1f + totalcarb9;
+                                var total3 = totalfat3 + totalfat6 + fat1f + totalfat9;
+                                var total4 = totalprotein3 + totalprotein6 + protein1f + totalprotein9;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            
+                            
+                            if (breakfast3.checked == true && lunch3.checked == true && snack2.checked == true && dinner1.checked == true)
+                            {
+                                var total1 = totalcal3 + totalcal6 + cal1g + totalcal7;
+                                var total2 = totalcarb3 + totalcarb6 + carb1g + totalcarb7;
+                                var total3 = totalfat3 + totalfat6 + fat1g + totalfat7;
+                                var total4 = totalprotein3 + totalprotein6 + protein1g + totalprotein7;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            if (breakfast3.checked == true && lunch3.checked == true && snack2.checked == true && dinner2.checked == true)
+                            {
+                                var total1 = totalcal3 + totalcal6 + cal1g + totalcal8;
+                                var total2 = totalcarb3 + totalcarb6 + carb1g + totalcarb8;
+                                var total3 = totalfat3 + totalfat6 + fat1g + totalfat8;
+                                var total4 = totalprotein3 + totalprotein6 + protein1g + totalprotein8;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            if (breakfast3.checked == true && lunch3.checked == true && snack2.checked == true && dinner3.checked == true)
+                            {
+                                var total1 = totalcal3 + totalcal6 + cal1g + totalcal9;
+                                var total2 = totalcarb3 + totalcarb6 + carb1g + totalcarb9;
+                                var total3 = totalfat3 + totalfat6 + fat1g + totalfat9;
+                                var total4 = totalprotein3 + totalprotein6 + protein1g + totalprotein9;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            
+                            
+                            if (breakfast3.checked == true && lunch3.checked == true && snack3.checked == true && dinner1.checked == true)
+                            {
+                                var total1 = totalcal3 + totalcal6 + cal1h + totalcal7;
+                                var total2 = totalcarb3 + totalcarb6 + carb1h + totalcarb7;
+                                var total3 = totalfat3 + totalfat6 + fat1h + totalfat7;
+                                var total4 = totalprotein3 + totalprotein6 + protein1h + totalprotein7;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            if (breakfast3.checked == true && lunch3.checked == true && snack3.checked == true && dinner2.checked == true)
+                            {
+                                var total1 = totalcal3 + totalcal6 + cal1h + totalcal8;
+                                var total2 = totalcarb3 + totalcarb6 + carb1h + totalcarb8;
+                                var total3 = totalfat3 + totalfat6 + fat1h + totalfat8;
+                                var total4 = totalprotein3 + totalprotein6 + protein1h + totalprotein8;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+                            if (breakfast3.checked == true && lunch3.checked == true && snack3.checked == true && dinner3.checked == true)
+                            {
+                                var total1 = totalcal3 + totalcal6 + cal1h + totalcal9;
+                                var total2 = totalcarb3 + totalcarb6 + carb1h + totalcarb9;
+                                var total3 = totalfat3 + totalfat6 + fat1h + totalfat9;
+                                var total4 = totalprotein3 + totalprotein6 + protein1h + totalprotein9;
+                                document.getElementById("resulta").innerHTML = total1.toFixed(0);
+                                document.getElementById("resultb").innerHTML = total2.toFixed(1);
+                                document.getElementById("resultc").innerHTML = total3.toFixed(1);
+                                document.getElementById("resultd").innerHTML = total4.toFixed(1);
+                            }
+            }   
+        </script>
+    </head>
+
+    <body style="background-color: LightSeaGreen;">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="bmrcalculator.html">BMR Calculator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="bmicalculator.html">BMI Calculator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="bodyfatcalc.html">Body Fat Calculator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="caloriecounter.html">Calorie Counter</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <h1 class="title">Calorie Counter</h1>
+
+        <p id="text">Your total daily calorie needs:</p>
+
+        <table class="centertable">
+            <tr>
+                <td class="lessspace" style="width:130px">
+                    <div>
+                        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="inputDailycalories" name="dailycalories" maxlength="5">
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <br>
+
+        <p id="text">Choose your meals:</p>
+        <br>
+
+        <table id="space" class="centertable">
+            <tr>
+                <td style="width:120px;text-align:center" class="inputcornerboth">Breakfast</td>
+                <td style="width:131px"></td>
+                <td style="width:120px;text-align:center" class="inputcornerboth">Lunch</td>
+                <td style="width:131px"></td>
+                <td style="width:120px;text-align:center" class="inputcornerboth">Snack</td>
+                <td style="width:131px"></td>
+                <td style="width:120px;text-align:center" class="inputcornerboth">Dinner</td>
+            </tr>
+        </table>
+
+        <table id="space" class="centertable">
+            <tr>
+                <td style="width:41px" class="inputcornersl">
+                    <div class="input-group-prepend">
+                        <input type="radio" name="breakfast" id="inputBreakfast1" value="breakfast1">
+                    </div>
+                </td>
+                <td id="row" style="width:170px" class="inputcornersr">Breakfast shake</td>
+                <td style="width:40px"></td>
+                <td style="width:41px" class="inputcornersl">
+                    <div class="input-group-prepend">
+                        <input type="radio" name="lunch" id="inputLunch1" value="lunch1">
+                    </div>
+                </td>
+                <td id="row" style="width:170px" class="inputcornersr">Avocado toast</td>
+                <td style="width:40px"></td>
+                <td style="width:41px" class="inputcornersl">
+                    <div class="input-group-prepend">
+                        <input type="radio" name="snack" id="inputSnack1" value="snack1">
+                    </div>
+                </td>
+                <td id="row" style="width:170px" class="inputcornersr">Apple</td>
+                <td style="width:40px"></td>
+                <td style="width:41px" class="inputcornersl">
+                    <div class="input-group-prepend">
+                        <input type="radio" name="dinner" id="inputDinner1" value="dinner1">
+                    </div>
+                </td>
+                <td id="row" style="width:170px" class="inputcornersr">Vegan pasta</td>
+            </tr>
+        </table>
+
+        <table id="space" class="centertable">
+            <tr>
+                <td style="width:41px" class="inputcornersl">
+                    <div class="input-group-prepend">
+                        <input type="radio" name="breakfast" id="inputBreakfast2" value="breakfast2">
+                    </div>
+                </td>
+                <td id="row" style="width:170px" class="inputcornersr">Blueberry pancakes</td>
+                <td style="width:40px"></td>
+                <td style="width:41px" class="inputcornersl">
+                    <div class="input-group-prepend">
+                        <input type="radio" name="lunch" id="inputLunch2" value="lunch2">
+                    </div>
+                </td>
+                <td id="row" style="width:170px" class="inputcornersr">Lentil soup</td>
+                <td style="width:40px"></td>
+                <td style="width:41px" class="inputcornersl">
+                    <div class="input-group-prepend">
+                        <input type="radio" name="snack" id="inputSnack2" value="snack2">
+                    </div>
+                </td>
+                <td id="row" style="width:170px" class="inputcornersr">Dark chocolate</td>
+                <td style="width:40px"></td>
+                <td style="width:41px" class="inputcornersl">
+                    <div class="input-group-prepend">
+                        <input type="radio" name="dinner" id="inputDinner2" value="dinner2">
+                    </div>
+                </td>
+                <td id="row" style="width:170px" class="inputcornersr">Sweet potato dahl</td>
+            </tr>
+        </table>
+
+        <table id="space" class="centertable">
+            <tr>
+                <td style="width:41px" class="inputcornersl">
+                    <div class="input-group-prepend">
+                        <input type="radio" name="breakfast" id="inputBreakfast3" value="breakfast3">
+                    </div>
+                </td>
+                <td id="row" style="width:170px" class="inputcornersr">Oatmeal Bowl</td>
+                <td style="width:40px"></td>
+                <td style="width:41px" class="inputcornersl">
+                    <div class="input-group-prepend">
+                        <input type="radio" name="lunch" id="inputLunch3" value="lunch3">
+                    </div>
+                </td>
+                <td id="row" style="width:170px" class="inputcornersr">Chickpea Salad</td>
+                <td style="width:40px"></td>
+                <td style="width:41px" class="inputcornersl">
+                    <div class="input-group-prepend">
+                        <input type="radio" name="snack" id="inputSnack3" value="snack3">
+                    </div>
+                </td>
+                <td id="row" style="width:170px" class="inputcornersr">Raisin bread</td>
+                <td style="width:40px"></td>
+                <td style="width:41px" class="inputcornersl">
+                    <div class="input-group-prepend">
+                        <input type="radio" name="dinner" id="inputDinner3" value="dinner3">
+                    </div>
+                </td>
+                <td id="row" style="width:170px" class="inputcornersr">Fried Rice</td>
+            </tr>
+        </table>
+        <br><br>
+
+        <div id="center">
+        <button type="button" class="btn btn-light" onclick="calculateMealPlan()">Create Meal Plan</button>
+        </div>
+        <br><br>
+
+        <table class="centertable" >
+            <tr class="header" id="borderbottom">
+                <td style="width:100px" class="cornertopl2">Meal</td>
+                <td style="width:215px" class="borderleft2">Ingredients</td>
+                <td style="width:100px" class="borderleft2">Quantity</td>
+                <td style="width:100px" class="borderleft2">Calories</td>
+                <td style="width:100px" class="borderleft2">Carbs</td>
+                <td style="width:100px" class="borderleft2">Fat</td>
+                <td style="width:100px" class="cornertopr2">Protein</td>
+            </tr>
+            <tr class="tablerow" id="borderbottom">
+                <td id="celcolor">Breakfast</td>
+                <td class="borderleft3" id="result"></td>
+                <td class="borderleft3"><span id="result2"></span></td>
+                <td class="borderleft3"><span id="result3"></span></td>
+                <td class="borderleft3"><span id="result4"></span></td>
+                <td class="borderleft3"><span id="result5"></span></td>
+                <td class="borderleft3"><span id="result6"></span></td>
+            </tr>
+            <tr class="tablerow" id="borderbottom">
+                <td id="celcolor">Total</td>
+                <td class="borderleft3"></td>
+                <td class="borderleft3"></td>
+                <td class="borderleft3"><span id="result7"></span></td>
+                <td class="borderleft3"><span id="result8"></span></td>
+                <td class="borderleft3"><span id="result9"></span></td>
+                <td class="borderleft3"><span id="result10"></span></td>
+            </tr>
+            <tr class="tablerow" id="borderbottom">
+                <td id="celcolor2"></td>
+                <td id="celcolor"class="borderleft"></td>
+                <td id="celcolor"class="borderleft"></td>
+                <td id="celcolor"class="borderleft"></td>
+                <td id="celcolor"class="borderleft"></td>
+                <td id="celcolor"class="borderleft"></td>
+                <td id="celcolor"class="borderleft"></td>
+            </tr>
+            <tr class="tablerow" id="borderbottom">
+                <td id="celcolor">Lunch</td>
+                <td class="borderleft" id="result11"></td>
+                <td class="borderleft"><span id="result12"></span></td>
+                <td class="borderleft"><span id="result13"></span></td>
+                <td class="borderleft"><span id="result14"></span></td>
+                <td class="borderleft"><span id="result15"></span></td>
+                <td class="borderleft"><span id="result16"></span></td>
+            </tr>
+            <tr class="tablerow" id="borderbottom">
+                <td id="celcolor">Snack</td>
+                <td class="borderleft" id="result21"></td>
+                <td class="borderleft"><span id="result22"></span></td>
+                <td class="borderleft"><span id="result23"></span></td>
+                <td class="borderleft"><span id="result24"></span></td>
+                <td class="borderleft"><span id="result25"></span></td>
+                <td class="borderleft"><span id="result26"></span></td>
+            </tr>
+            <tr class="tablerow" id="borderbottom">
+                <td id="celcolor">Total</td>
+                <td class="borderleft"></td>
+                <td class="borderleft"></td>
+                <td class="borderleft"><span id="result17"></span></td>
+                <td class="borderleft"><span id="result18"></span></td>
+                <td class="borderleft"><span id="result19"></span></td>
+                <td class="borderleft"><span id="result20"></span></td>
+            </tr>
+            <tr class="tablerow" id="borderbottom">
+                <td id="celcolor2"></td>
+                <td id="celcolor"class="borderleft"></td>
+                <td id="celcolor"class="borderleft"></td>
+                <td id="celcolor"class="borderleft"></td>
+                <td id="celcolor"class="borderleft"></td>
+                <td id="celcolor"class="borderleft"></td>
+                <td id="celcolor"class="borderleft"></td>
+            </tr>
+            <tr class="tablerow" id="borderbottom">
+                <td id="celcolor">Dinner</td>
+                <td class="borderleft"><span id="result27"></span></td>
+                <td class="borderleft"><span id="result28"></span></td>
+                <td class="borderleft"><span id="result29"></span></td>
+                <td class="borderleft"><span id="result30"></span></td>
+                <td class="borderleft"><span id="result31"></span></td>
+                <td class="borderleft"><span id="result32"></span></td>
+            </tr>
+            <tr class="tablerow" id="borderbottom">
+                <td id="celcolor">Total</td>
+                <td class="borderleft"></td>
+                <td class="borderleft"></td>
+                <td class="borderleft"><span id="result33"></span></td>
+                <td class="borderleft"><span id="result34"></span></td>
+                <td class="borderleft"><span id="result35"></span></td>
+                <td class="borderleft"><span id="result36"></span></td>
+            </tr>
+            <tr class="tablerow" id="borderbottom">
+                <td id="celcolor2"></td>
+                <td id="celcolor"class="borderleft"></td>
+                <td id="celcolor"class="borderleft"></td>
+                <td id="celcolor"class="borderleft"></td>
+                <td id="celcolor"class="borderleft"></td>
+                <td id="celcolor"class="borderleft"></td>
+                <td id="celcolor"class="borderleft"></td>
+            </tr>
+            <tr class="tablerow" id="borderbottom">
+                <td id="celcolor" class="borderleft2b">Total</td>
+                <td class="borderleft"></td>
+                <td class="borderleft"></td>
+                <td class="borderleft2"><span id="resulta"></span></td>
+                <td class="borderleft2"><span id="resultb"></span></td>
+                <td class="borderleft2"><span id="resultc"></span></td>
+                <td class="borderleft2"><span id="resultd"></span></td>
+            </tr>
+            <tr class="tablerow">
+                <td id="celcolor2"class="cornerleft"></td>
+                <td id="celcolor"class="borderleft"></td>
+                <td id="celcolor"class="borderleft"></td>
+                <td id="celcolor"class="borderleft"></td>
+                <td id="celcolor"class="borderleft"></td>
+                <td id="celcolor"class="borderleft"></td>
+                <td id="celcolor"class="cornerright"></td>
+            </tr>
+        </table><br><br>
+             
+        <p id="text2"> 
+        *Fruits: 1 small banana ≈ 100 gram, medium ≈ 130 gram, big ≈ 165 gram; 1 medium avocado ≈ 150 gram; 1 medium tomato ≈ 70 gram; <br>
+        1 mango ≈ 280 gram; 1 small apple ≈ 145 gram, medium ≈ 180 gram, big ≈ 225 gram;  
+        <br><br>
+        
+        *Vegetables: 1 white mushroom ≈ 18 gram; 1 radish ≈ 5 gram; 1 medium carrot ≈ 60 gram; 1 medium onion ≈ 100 gram; 1 red hot pepper ≈ 20 gram; <br>
+        1 cauliflower medium ≈ 500 gram; 1 paprika ≈ 135 gram; 1 eggplant ≈ 290 gram;
+        <br><br>
+    
+        *Seasoning / liquids: 1 teaspoon (tsp) seeds ≈ 3.3 gram, 1 tablespoon (tbsp) ≈ 10 gram; 1 tsp seasoning / powder ≈ 2 gram, 1 tbsp ≈ 6 gram; <br>
+        1 tsp liquid ≈ 5 gram, 1 tbsp ≈ 15 gram; 1 clove garlic ≈ 2 gram; 1 tablespoon fresh herbs ≈ 2 gram; 
+        <br><br>
+        
+        *Whole grains: 1 thin slice whole grain bread / raisin bread ≈ 25 gram, medium slice ≈ 35 gram, big slice ≈ 48 gram;
+        </p><br><br><br><br>
+    </body>
+</html>

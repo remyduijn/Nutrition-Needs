@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="health and nutrition">
+        <meta name="author" content="remyduijn">
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>My Webpage</title>
+        
+        <script>
+            function calculateFat() 
+            {
+                var height = document.getElementById("inputHeight").value; 
+                var weight = document.getElementById("inputWeight").value; 
+                var waist = document.getElementById("inputWaist").value;
+                var neck = document.getElementById("inputNeck").value;
+                var hip = document.getElementById("inputHip").value;
+                var gender = document.getElementById("inputGender").value;
+                if (gender === 'male')
+                {
+                    var fat = (495 / ((1.0324 - (0.19077 * Math.log10(waist - neck))) + (0.15456 * Math.log10(height)))) - 450;
+                }
+                else
+                {
+                    var fat = (495 / ((1.29579 - (0.35004 * Math.log10((waist * 1) + (hip - neck)))) + (0.22100 * Math.log10(height)))) - 450;
+                }
+                document.getElementById("result").innerHTML = fat.toFixed(1) + '%';
+            }
+            
+            function calculateTarget() 
+            {
+                var weight = document.getElementById("inputWeight").value; 
+                var current = document.getElementById("inputCurrent").value;
+                var target = document.getElementById("inputTarget").value;
+                
+                var fatmass = (current / 100) * weight;
+                var leanmass = weight - fatmass;
+                var targetmass = (leanmass / (100 - target)) * target;
+                var losefat = fatmass - targetmass;
+                
+                document.getElementById("result2").innerHTML = fatmass.toFixed(1) + 'kg';
+                document.getElementById("result3").innerHTML = leanmass.toFixed(1) + 'kg';
+                document.getElementById("result4").innerHTML = targetmass.toFixed(1) + 'kg';
+                document.getElementById("result5").innerHTML = losefat.toFixed(1) + 'kg';
+            }
+        </script>
+    </head>
+ 
+    <body style="background-color: LightSeaGreen;">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="bmrcalculator.html">BMR Calculator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="bmicalculator.html">BMI Calculator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="bodyfatcalc.html">Body Fat Calculator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="caloriecounter.html">Calorie Counter</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <h1 class="title">Body Fat Calculator</h1>
+        
+        <p id="text">Body fat includes essential body fat and storage body fat. Essential body fat is a base level of fat that is found in most parts of the body. It is necessary fat that maintains life and 
+        reproductive functions. While having excess body fat can have many detrimental effects on a person's health, insufficient body fat can have negative health effects of its own. Body fat percentage plays 
+        an important role in distinguishing between a healthy and an obese individual, as it has a greater ability to differentiate between lean mass and fat mass compared to BMI.</p>
+        
+        <h2 class="title">U.S. Navy Method</h2>
+
+        <p id="text">One of the best methods of estimating the fat content of a person's body was developed by the US Navy. The body fat percentage is determined for all service members of the US Navy since 
+        they are required to meet certain percent body fat (%BF) standards as a condition of military service. </p> 
+        <p id="text2"> *Measure the circumference of the subject's waist at a horizontal level around the navel for men, and at the level with the smallest width for women.
+        Measure the circumference of the subject's neck starting below the larynx, with the tape sloping downward to the front. 
+        For women only: measure the circumference of the subject's hips at the largest horizontal measure.</p><br><br>
+        
+        <table id="space2" class="centertable">
+            <tr>
+                <td style="width:130px" class="inputcornersl2">
+                    <div>
+                        <span>Neck in cm</span>
+                    </div>
+                </td>
+                <td id="row" style="width:130px" class="inputcornersr2"><input type="text" class="form-control" id="inputNeck" name="neck" maxlength="5"></td>
+            </tr>
+            <tr>
+                <td style="width:130px" class="inputcornersl2">
+                    <div>
+                        <span>Waist in cm</span>
+                    </div>
+                </td>
+                <td id="row" style="width:130px" class="inputcornersr2"><input type="text" class="form-control" id="inputWaist" name="waist" maxlength="6"></td>
+            </tr>
+            <tr>
+                <td style="width:130px" class="inputcornersl2">
+                    <div>
+                        <span>Hip in cm</span>
+                    </div>
+                </td>
+                <td id="row" style="width:130px" class="inputcornersr2"><input type="text" class="form-control" id="inputHip" name="hip" maxlength="6"></td>
+            </tr>
+            <tr>
+                <td style="width:130px" class="inputcornersl2">
+                    <div>
+                        <span>Height in cm</span>
+                    </div>
+                </td>
+                <td id="row" style="width:130px" class="inputcornersr2"><input type="text" class="form-control" id="inputHeight" name="height" maxlength="6"></td>
+            </tr>
+            <tr>
+                <td style="width:130px" class="inputcornersl2">
+                    <div>
+                        <span>Gender</span>
+                    </div>
+                </td>
+                <td id="row" style="width:130px" class="inputcornersr2">
+                <select class="custom-select" id="inputGender" name="gender">
+                <option selected>Choose...</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                </select>
+                </td>
+            </tr>
+        </table>
+        <br>
+        
+        <div id="center">
+        <button type="button" class="btn btn-light" onclick="calculateFat()">Calculate</button>        
+        </div>
+        
+        <br><br>
+        
+        <p id="text">Your Body Fat Percentage is: <span id="result"></span></p>
+        <br><br>
+        
+        <table class="centertable" >
+            <tr class="header" id="borderbottom">
+                <td style="width:140px" class="cornertopl">Category</td>
+                <td style="width:140px" class="borderleft">Women (% Fat)</td>
+                <td style="width:140px" class="cornertopr">Men (% Fat)</td>
+            </tr>
+            <tr class="tablerow" id="borderbottom">
+                <td>Essential fat</td>
+                <td class="borderleft">10-13%</td>
+                <td class="borderleft">2-5%</td>
+            </tr>
+            <tr class="tablerow" id="borderbottom">
+                <td>Athletes</td>
+                <td class="borderleft">14-20%</td>
+                <td class="borderleft">6-13%</td>
+            </tr>
+            <tr class="tablerow" id="borderbottom">
+                <td>Fitness</td>
+                <td class="borderleft">21-24%</td>
+                <td class="borderleft">14-17%</td>
+            </tr>
+            <tr class="tablerow" id="borderbottom">
+                <td>Acceptable</td>
+                <td class="borderleft">25-31%</td>
+                <td class="borderleft">18-24%</td>
+            </tr>
+            <tr class="tablerow">
+                <td class="cornerleft">Obese</td>
+                <td class="borderleft">>32%</td>
+                <td class="cornerright">>25%</td>
+            </tr>
+        </table><br><br>
+              
+        <table id="space2" class="centertable">
+            <tr>
+                <td style="width:185px" class="inputcornersl2">
+                    <div>
+                        <span>Current weight in kg</span>
+                    </div>
+                </td>
+                <td id="row" style="width:130px" class="inputcornersr2"><input type="text" class="form-control" id="inputWeight" name="weight" maxlength="6" required></td>
+            </tr>
+            <tr>
+                <td style="width:160px" class="inputcornersl2">
+                    <div>
+                        <span>Current body fat %</span>
+                    </div>
+                </td>
+                <td id="row" style="width:130px" class="inputcornersr2"><input type="text" class="form-control" id="inputCurrent" name="current" maxlength="5" required></td>
+            </tr>
+            <tr>
+                <td style="width:160px" class="inputcornersl2">
+                    <div>
+                        <span>Target body fat %</span>
+                    </div>
+                </td>
+                <td id="row" style="width:130px" class="inputcornersr2"><input type="text" class="form-control" id="inputTarget" name="target" maxlength="5" required></td>
+            </tr>
+        </table>
+        <br> 
+        
+        <div id="center">
+        <button type="button" class="btn btn-light" onclick="calculateTarget()">Calculate</button>        
+        </div>
+        <br><br>
+        
+        <p id="text">Your current fat mass: <span id="result2"></span></p>
+        <p id="text">Your current lean mass: <span id="result3"></span></p>
+        <p id="text">Your target fat mass: <span id="result4"></span></p>
+        <p id="text">Fat mass you'd have to lose: <span id="result5"></span></p>
+        <br>
+        
+        <p id="text"> Your lean body mass should not decrease, because it is at the expense of muscle tissue, among other things.</p>
+        
+        <h2 class="title">Potential Complications of Excess Body Fat</h2>
+
+        <p id="text">The World Health Organization (WHO) classifies obesity as one of the leading preventable causes of death worldwide. Obesity is associated with a reduction in quality of life, 
+        poorer mental health outcomes, obstructive sleep apnea, as well as multiple leading causes of death worldwide such as cardiovascular disease, stroke, certain cancers and diabetes. All of these 
+        potential complications have the ability to reduce a person's life expectancy.</p>
+        
+        <p id="text">Fat produces a number of essential hormones that affect a person's body. An excess or a lack of critical hormones can have negative effects that preclude proper body function. On a related note, 
+        studies have found that excess body fat, particularly abdominal fat, disrupts the normal balance and function of some of these hormones. Furthermore, body fat, specifically visceral fat, has a 
+        role in the release of specific cytokines, which are a broad category of proteins involved in cell signaling, that can potentially increase the risk of cardiovascular disease. Visceral fat is also 
+        directly associated with higher levels of low-density lipoprotein (LDL) cholesterol, lower high-density lipoprotein (HDL) cholesterol, and insulin resistance. LDL cholesterol is commonly referred 
+        to as "bad cholesterol" while HDL is referred to as "good cholesterol." High levels of LDL cholesterol can clog arteries and lead to complications including heart attacks. Insulin resistance 
+        involves cells not properly responding to the hormone insulin, which can lead to high blood sugar levels, and eventually to type 2 diabetes.</p>        <br><br><br><br>
+    </body>
+</html>
