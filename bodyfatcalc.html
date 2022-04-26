@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="health and nutrition">
         <meta name="author" content="remyduijn">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
         <link href="styles.css" rel="stylesheet">
         <title>My Webpage</title>
@@ -49,26 +50,32 @@
         </script>
     </head>
  
-    <body style="background-color: LightSeaGreen;">
+    <body style="background-color: #94d1a6;">
+
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="bmrcalculator.html">BMR Calculator</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="bmicalculator.html">BMI Calculator</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="bodyfatcalc.html">Body Fat Calculator</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="caloriecounter.html">Calorie Counter</a>
-                    </li>
-                </ul>
+            <div class="container-fluid">
+                <button id="icon-active" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div id="navbarNav" class="collapse navbar-collapse">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link home" href="index.html">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="bmrcalculator.html">BMR Calculator</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="bmicalculator.html">BMI Calculator</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="bodyfatcalc.html">Body Fat Calculator</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="caloriecounter.html">Calorie Counter</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </nav>
 
@@ -142,45 +149,45 @@
         
         <br><br>
         
-        <p id="text">Your Body Fat Percentage is: <span id="result"></span></p>
+        <p class="text">Your Body Fat Percentage is: <span id="result"></span></p>
         <br><br>
         
         <table class="centertable" >
             <tr class="header" id="borderbottom">
                 <td style="width:140px" class="cornertopl">Category</td>
-                <td style="width:140px" class="borderleft">Women (% Fat)</td>
+                <td style="width:140px" class="borderleft-copy">Women (% Fat)</td>
                 <td style="width:140px" class="cornertopr">Men (% Fat)</td>
             </tr>
             <tr class="tablerow" id="borderbottom">
                 <td>Essential fat</td>
-                <td class="borderleft">10-13%</td>
-                <td class="borderleft">2-5%</td>
+                <td class="borderleft-copy">10-13%</td>
+                <td class="borderleft-copy">2-5%</td>
             </tr>
             <tr class="tablerow" id="borderbottom">
                 <td>Athletes</td>
-                <td class="borderleft">14-20%</td>
-                <td class="borderleft">6-13%</td>
+                <td class="borderleft-copy">14-20%</td>
+                <td class="borderleft-copy">6-13%</td>
             </tr>
             <tr class="tablerow" id="borderbottom">
                 <td>Fitness</td>
-                <td class="borderleft">21-24%</td>
-                <td class="borderleft">14-17%</td>
+                <td class="borderleft-copy">21-24%</td>
+                <td class="borderleft-copy">14-17%</td>
             </tr>
             <tr class="tablerow" id="borderbottom">
                 <td>Acceptable</td>
-                <td class="borderleft">25-31%</td>
-                <td class="borderleft">18-24%</td>
+                <td class="borderleft-copy">25-31%</td>
+                <td class="borderleft-copy">18-24%</td>
             </tr>
             <tr class="tablerow">
                 <td class="cornerleft">Obese</td>
-                <td class="borderleft">>32%</td>
+                <td class="borderleft-copy">>32%</td>
                 <td class="cornerright">>25%</td>
             </tr>
         </table><br><br>
               
         <table id="space2" class="centertable">
             <tr>
-                <td style="width:185px" class="inputcornersl2">
+                <td style="width:170px" class="inputcornersl2">
                     <div>
                         <span>Current weight in kg</span>
                     </div>
@@ -211,13 +218,13 @@
         </div>
         <br><br>
         
-        <p id="text">Your current fat mass: <span id="result2"></span></p>
-        <p id="text">Your current lean mass: <span id="result3"></span></p>
-        <p id="text">Your target fat mass: <span id="result4"></span></p>
-        <p id="text">Fat mass you'd have to lose: <span id="result5"></span></p>
+        <p class="text">Your current fat mass: <span id="result2"></span></p>
+        <p class="text">Your current lean mass: <span id="result3"></span></p>
+        <p class="text">Your target fat mass: <span id="result4"></span></p>
+        <p class="text">Fat mass you'd have to lose: <span id="result5"></span></p>
         <br>
         
-        <p id="text"> Your lean body mass should not decrease, because it is at the expense of muscle tissue, among other things.</p>
+        <p class="text"> Your lean body mass should not decrease, because it is at the expense of muscle tissue, among other things.</p>
         
         <h2 class="title">Potential Complications of Excess Body Fat</h2>
 
@@ -230,6 +237,19 @@
         role in the release of specific cytokines, which are a broad category of proteins involved in cell signaling, that can potentially increase the risk of cardiovascular disease. Visceral fat is also 
         directly associated with higher levels of low-density lipoprotein (LDL) cholesterol, lower high-density lipoprotein (HDL) cholesterol, and insulin resistance. LDL cholesterol is commonly referred 
         to as "bad cholesterol" while HDL is referred to as "good cholesterol." High levels of LDL cholesterol can clog arteries and lead to complications including heart attacks. Insulin resistance 
-        involves cells not properly responding to the hormone insulin, which can lead to high blood sugar levels, and eventually to type 2 diabetes.</p>        <br><br><br><br>
+        involves cells not properly responding to the hormone insulin, which can lead to high blood sugar levels, and eventually to type 2 diabetes.</p>        
+        <br><br><br><br>
+
+        <footer class="footer bg-light">     
+            <div class="container">
+              <div class="row">
+                <div class="text-center">
+                  <p class="footer text-muted m-4">&copy; Nutrition Needs 2021. All Rights Reserved.</p>
+                </div>
+              </div>
+            </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>    
     </body>
 </html>

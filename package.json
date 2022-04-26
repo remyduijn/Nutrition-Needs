@@ -1,11 +1,22 @@
 {
-  "name": "project",
+  "name": "nutrition-needs",
   "version": "1.0.0",
-  "description": "nutritional needs calculator",
+  "description": "//project explanation",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "remy duijn",
-  "license": "ISC"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/remyduijn/Nutrition-Needs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/remyduijn/Nutrition-Needs/issues"
+  },
+  "homepage": "https://github.com/remyduijn/Nutrition-Needs#readme",
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  }
 }
