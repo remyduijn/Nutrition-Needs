@@ -1,6 +1,6 @@
 //project explanation
 
-My project entails a web program written in Javascript, HTML and CSS, about nutritional needs. 
+This project entails a web program written in Javascript, HTML and CSS, about nutritional needs. 
 
 Food and nutriton has always played an important role in my life. Seeing what it can do for a person’s health, for myself and people around me. 
 I have seen people’s life change who were not very healthy before or even terminally ill. My goal with this project was to make more people aware of their current health and help them have an indication about how many calories they should consume in a day, and how these calories should look like in terms of food. 
